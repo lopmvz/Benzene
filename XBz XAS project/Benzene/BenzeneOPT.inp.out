@@ -1,0 +1,1509 @@
+Q-Chem Developer Version!
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.1, Q-Chem, Inc., Pleasanton, CA (2018)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,  
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,  
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,  
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,  
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,  
+ Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,  J. Gonthier,  A. Gunina,  
+ D. Hait,  M. W. D. Hanson-Heine,  P. H. P. Harbach,  A. W. Hauser,  
+ J. E. Herr,  E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  
+ T.-C. Jagau,  Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  
+ P. Klunzinger,  K. Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  
+ C. M. Krauter,  A. Kunitsa,  Ka Un Lao,  A. Laurent,  K. V. Lawler,  
+ Joonho Lee,  D. Lefrancois,  S. Lehtola,  D. S. Levine,  Yi-Pei Li,  
+ You-Sheng Lin,  Fenglai Liu,  E. Livshits,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  T. M. Perrine,  F. Plasser,  P. Pokhilko,  S. Prager,  
+ A. Prociuk,  E. Ramos,  D. R. Rehn,  F. Rob,  M. Schneider,  N. Sergueev,  
+ S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  T. Stein,  
+ Yu-Chuan Su,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  
+ L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  
+ C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  
+ T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.1.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Wed Sep  5 11:03:16 2018  
+
+node3
+Host: 0
+
+     Scratch files written to /scratch/krylov/qchem20836//
+Input Ideriv = 1
+Curr. Ideriv = -1
+Max.  Ideriv = 1
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0 1
+  H    2.1527918    1.2429149    0.0000000
+  C    1.2047582    0.6955675    0.0000000
+  C    1.2047582   -0.6955675    0.0000000
+  H    2.1527918   -1.2429149    0.0000000
+  C   -0.0000000   -1.3911349   -0.0000000
+  H   -0.0000000   -2.4858298   -0.0000000
+  C   -1.2047582   -0.6955675   -0.0000000
+  H   -2.1527918   -1.2429149   -0.0000000
+  C   -1.2047582    0.6955675   -0.0000000
+  H   -2.1527918    1.2429149   -0.0000000
+  C    0.0000000    1.3911349    0.0000000
+  H    0.0000000    2.4858298    0.0000000
+$end
+
+$rem
+   AUXILIARY_BASIS  =  RIMP2-cc-PVTZ
+   BASIS  =  cc-pVTZ
+   JOB_TYPE  =  Optimization
+   METHOD  =  RI-MP2
+   SCF_CONVERGENCE  =  8
+   n_frozen_core = FC
+$end
+
+
+--------------------------------------------------------------
+ Atom  12: (  1.2429149388, -2.1527917339,  0.0000000000)
+         ->(  1.2429149766, -2.1527917558,  0.0000000000)
+ Atom  10: ( -1.2429148991, -2.1527918005,  0.0000000000)
+         ->( -1.2429148612, -2.1527918224,  0.0000000000)
+ Atom   6: ( -1.2429149388,  2.1527917339, -0.0000000000)
+         ->( -1.2429149766,  2.1527917558,  0.0000000000)
+ Atom   4: (  1.2429148991,  2.1527918005, -0.0000000000)
+         ->(  1.2429148612,  2.1527918224,  0.0000000000)
+ Atom   1: (  2.4858298379,  0.0000000666,  0.0000000000)
+         ->(  2.4858298379,  0.0000000000,  0.0000000000)
+ Atom  11: (  0.6955674717, -1.2047581510,  0.0000000000)
+         ->(  0.6955674783, -1.2047582125,  0.0000000000)
+ Atom   9: ( -0.6955674349, -1.2047582376,  0.0000000000)
+         ->( -0.6955674783, -1.2047582125,  0.0000000000)
+ Atom   5: ( -0.6955674717,  1.2047581510, -0.0000000000)
+         ->( -0.6955674783,  1.2047582125,  0.0000000000)
+ Atom   3: (  0.6955674349,  1.2047582376, -0.0000000000)
+         ->(  0.6955674783,  1.2047582125,  0.0000000000)
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      H       2.4858298379     0.0000000000     0.0000000000
+    2      C       1.3911349566    -0.0000000000     0.0000000000
+    3      C       0.6955674783     1.2047582125     0.0000000000
+    4      H       1.2429148612     2.1527918224     0.0000000000
+    5      C      -0.6955674783     1.2047582125     0.0000000000
+    6      H      -1.2429149766     2.1527917558     0.0000000000
+    7      C      -1.3911349566     0.0000000000    -0.0000000000
+    8      H      -2.4858298379    -0.0000000666    -0.0000000000
+    9      C      -0.6955674783    -1.2047582125     0.0000000000
+   10      H      -1.2429148612    -2.1527918224     0.0000000000
+   11      C       0.6955674783    -1.2047582125     0.0000000000
+   12      H       1.2429149766    -2.1527917558     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D6h   NOp = 24
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =   203.6504530853 hartrees
+ There are       21 alpha and       21 beta electrons
+ Requested basis set is cc-pVTZ
+ There are 96 shells and 264 basis functions
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ Requested basis set is rimp2-cc-pVTZ
+ There are 198 shells and 666 basis functions
+ A cutoff of  1.0D-11 yielded   4428 shell pairs
+ There are     33684 function pairs (     43731 Cartesian)
+
+ -------------------------------------------------------
+ OpenMP Integral Computing Module                       
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients                     0
+ long-range coefficients              100000000
+ Omega coefficients                           0
+ if combine SR and LR in K                    0
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                776718
+ size of scratch memory is              4657032
+ max col of scratch BK array              10000
+ max len of scratch array in speh3          662
+ max len of scratch index in speh4           32
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  3
+ order of int derivative is                   0
+ number of shells is                         96
+ number of basis is                         300
+ number of cartesian basis is               300
+ number of contracted shell pairs          4428
+ number of primitive shell pairs          13026
+ maxK2 (contraction) of shell pair           49
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair            618
+ max number of PS2 of shell pair           2142
+ mem total for path MDJ                  624864
+ -------------------------------------------------------
+ Smallest overlap matrix eigenvalue = 3.70E-05
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000057 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 42.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -233.2185394021      3.40e-02  
+    2    -230.7130303898      2.24e-03  
+    3    -230.7726449954      6.42e-04  
+    4    -230.7773727248      2.82e-04  
+    5    -230.7780983261      2.06e-05  
+    6    -230.7781056535      3.27e-06  
+    7    -230.7781058543      8.83e-07  
+    8    -230.7781058661      1.31e-07  
+    9    -230.7781058643      1.46e-08  
+   10    -230.7781058652      2.08e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 52.47s  wall 13.00s 
+ SCF   energy in the final basis set =     -230.7781058652
+ Total energy in the final basis set =     -230.7781058652
+
+
+ --------------------------------------------------------------
+  Generalized many-body perturbation theory program
+  by Joonho Lee, Fazle Rob, Xintian Feng, Evgeny Epifanovsky
+
+         1      0.00047266     MINRES Iteration
+         2      0.00010932     MINRES Iteration
+         3      0.00002085     MINRES Iteration
+         4      0.00000291     MINRES Iteration
+         5      0.00000040     MINRES Done
+
+ In RI-MP2 calculation: 
+ # of frozen core orbitals: 6
+
+ Components of the RIMP2 correlation energy:
+        aaaa    correlation energy =        -0.1188844798 a.u.
+        abab    correlation energy =        -0.7126716172 a.u.
+        bbbb    correlation energy =        -0.1188844798 a.u.
+        non-Brillouin singles      =        -0.0000000000 a.u.
+        total same-spin energy     =        -0.2377689595 a.u.
+        total opposite-spin energy =        -0.7126716172 a.u.
+
+ Total  RIMP2   correlation energy =        -0.9504405767 a.u.
+        RIMP2         total energy =      -231.7285464419 a.u.
+
+ RI-MP2 Gradient Time:  CPU 1370.49 s  wall 345.87 s
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.235 -11.235 -11.235 -11.233 -11.233 -11.233  -1.150  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.820  -0.820  -0.705  -0.637  -0.619  -0.584  -0.584
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.503  -0.491  -0.491  -0.336  -0.336
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.145   0.170   0.170   0.202   0.202   0.221
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.332   0.360   0.360   0.394   0.415   0.419   0.419   0.431
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.474   0.474   0.507   0.525   0.525   0.547   0.573   0.573
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.591   0.591   0.624   0.641   0.641   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   1 A2g                
+  0.643   0.668   0.704   0.727   0.727   0.754   0.754   0.845
+  7 A1g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.859   0.859   0.904   0.904   0.956   0.957   0.957   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.006   1.028   1.028   1.085   1.112   1.119   1.210   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   7 B1u   4 A2u   3 B2g   4 E2u                
+  1.219   1.231   1.231   1.292   1.292   1.310   1.310   1.318
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.376   1.376   1.474   1.491   1.507   1.507   1.509   1.509
+ 11 E1u  11 E1u   4 B2u   3 A2g  11 E2g  11 E2g  12 E1u  12 E1u                
+  1.511   1.511   1.589   1.589   1.611   1.613   1.613   1.628
+  5 E1g   5 E1g   5 E2u   5 E2u   8 B1u  12 E2g  12 E2g  13 E1u                
+  1.628   1.721   1.721   1.722   1.763   1.813   1.892   2.085
+ 13 E1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.183   2.183   2.223   2.294   2.294   2.333   2.376   2.442
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.442   2.466   2.474   2.474   2.539   2.539   2.604   2.662
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.744   2.744   2.774   2.774   2.796   2.848   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.949   2.949   2.987   3.005   3.005   3.027   3.027
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.061   3.061   3.078   3.098   3.162   3.162   3.230   3.230
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   9 E1g   9 E1g                
+  3.231   3.295   3.295   3.326   3.326   3.346   3.376   3.376
+  8 A2u  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.380   3.380   3.389   3.405   3.411   3.411   3.442   3.445
+ 19 E1u  19 E1u   7 B2u  15 A1g  19 E2g  19 E2g  12 B1u   9 E2u                
+  3.445   3.460   3.506   3.613   3.613   3.621   3.655   3.655
+  9 E2u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g  20 E1u  20 E1u                
+  3.659   3.692   3.692   3.702   3.702   3.718   3.718   3.768
+  2 A1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.903   3.908   3.908   3.922   4.041   4.059   4.094   4.094
+  4 B1g  21 E2g  21 E2g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.110   4.110   4.113   4.120   4.120   4.132   4.134   4.166
+ 22 E1u  22 E1u   9 A2u  22 E2g  22 E2g   8 B2u   6 A2g  11 E2u                
+  4.166   4.180   4.202   4.202   4.325   4.325   4.342   4.417
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u  12 E2u                
+  4.417   4.420   4.438   4.438   4.483   4.489   4.498   4.532
+ 12 E2u   7 A2g  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.532   4.563   4.663   4.663   4.669   4.669   4.673   4.673
+ 24 E2g  16 B1u  13 E1g  13 E1g  24 E1u  24 E1u  25 E2g  25 E2g                
+  4.677   4.677   4.857   4.880   4.880   4.964   5.037   5.037
+ 13 E2u  13 E2u  18 A1g  26 E2g  26 E2g  10 A2u  25 E1u  25 E1u                
+  5.069   5.090   5.090   5.090   5.090   5.169   5.234   5.287
+  9 B2g  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.345   5.345   5.347   5.357   5.391   5.391   5.512   5.512
+ 14 E2u  14 E2u   8 A2g  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.728   5.728   5.786   6.035   6.035   6.072   6.268   6.268
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.375   6.495   6.495   6.852   7.313   9.291  12.980  12.980
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.558  13.558  16.232
+ 30 E2g  30 E2g  20 B1u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.235 -11.235 -11.235 -11.233 -11.233 -11.233  -1.150  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.820  -0.820  -0.705  -0.637  -0.619  -0.584  -0.584
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.503  -0.491  -0.491  -0.336  -0.336
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.145   0.170   0.170   0.202   0.202   0.221
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.332   0.360   0.360   0.394   0.415   0.419   0.419   0.431
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.474   0.474   0.507   0.525   0.525   0.547   0.573   0.573
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.591   0.591   0.624   0.641   0.641   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   1 A2g                
+  0.643   0.668   0.704   0.727   0.727   0.754   0.754   0.845
+  7 A1g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.859   0.859   0.904   0.904   0.956   0.957   0.957   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.006   1.028   1.028   1.085   1.112   1.119   1.210   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   7 B1u   4 A2u   3 B2g   4 E2u                
+  1.219   1.231   1.231   1.292   1.292   1.310   1.310   1.318
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.376   1.376   1.474   1.491   1.507   1.507   1.509   1.509
+ 11 E1u  11 E1u   4 B2u   3 A2g  11 E2g  11 E2g  12 E1u  12 E1u                
+  1.511   1.511   1.589   1.589   1.611   1.613   1.613   1.628
+  5 E1g   5 E1g   5 E2u   5 E2u   8 B1u  12 E2g  12 E2g  13 E1u                
+  1.628   1.721   1.721   1.722   1.763   1.813   1.892   2.085
+ 13 E1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.183   2.183   2.223   2.294   2.294   2.333   2.376   2.442
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.442   2.466   2.474   2.474   2.539   2.539   2.604   2.662
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.744   2.744   2.774   2.774   2.796   2.848   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.949   2.949   2.987   3.005   3.005   3.027   3.027
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.061   3.061   3.078   3.098   3.162   3.162   3.230   3.230
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   9 E1g   9 E1g                
+  3.231   3.295   3.295   3.326   3.326   3.346   3.376   3.376
+  8 A2u  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.380   3.380   3.389   3.405   3.411   3.411   3.442   3.445
+ 19 E1u  19 E1u   7 B2u  15 A1g  19 E2g  19 E2g  12 B1u   9 E2u                
+  3.445   3.460   3.506   3.613   3.613   3.621   3.655   3.655
+  9 E2u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g  20 E1u  20 E1u                
+  3.659   3.692   3.692   3.702   3.702   3.718   3.718   3.768
+  2 A1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.903   3.908   3.908   3.922   4.041   4.059   4.094   4.094
+  4 B1g  21 E2g  21 E2g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.110   4.110   4.113   4.120   4.120   4.132   4.134   4.166
+ 22 E1u  22 E1u   9 A2u  22 E2g  22 E2g   8 B2u   6 A2g  11 E2u                
+  4.166   4.180   4.202   4.202   4.325   4.325   4.342   4.417
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u  12 E2u                
+  4.417   4.420   4.438   4.438   4.483   4.489   4.498   4.532
+ 12 E2u   7 A2g  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.532   4.563   4.663   4.663   4.669   4.669   4.673   4.673
+ 24 E2g  16 B1u  13 E1g  13 E1g  24 E1u  24 E1u  25 E2g  25 E2g                
+  4.677   4.677   4.857   4.880   4.880   4.964   5.037   5.037
+ 13 E2u  13 E2u  18 A1g  26 E2g  26 E2g  10 A2u  25 E1u  25 E1u                
+  5.069   5.090   5.090   5.090   5.090   5.169   5.234   5.287
+  9 B2g  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.345   5.345   5.347   5.357   5.391   5.391   5.512   5.512
+ 14 E2u  14 E2u   8 A2g  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.728   5.728   5.786   6.035   6.035   6.072   6.268   6.268
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.375   6.495   6.495   6.852   7.313   9.291  12.980  12.980
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.558  13.558  16.232
+ 30 E2g  30 E2g  20 B1u                                                        
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.143829
+      2 C                    -0.143829
+      3 C                    -0.143825
+      4 H                     0.143831
+      5 C                    -0.143830
+      6 H                     0.143829
+      7 C                    -0.143829
+      8 H                     0.143829
+      9 C                    -0.143828
+     10 H                     0.143829
+     11 C                    -0.143834
+     12 H                     0.143828
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y      -0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -32.1925     XY      -0.0000     YY     -32.1925
+        XZ       0.0000     YZ      -0.0000     ZZ     -40.0322
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY      -0.0000    XYY      -0.0000
+       YYY      -0.0000    XXZ      -0.0000    XYZ      -0.0000
+       YYZ      -0.0000    XZZ      -0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -275.9281   XXXY      -0.0000   XXYY     -91.9760
+      XYYY       0.0000   YYYY    -275.9281   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ       0.0000   YYYZ      -0.0000
+      XXZZ     -64.0555   XYZZ      -0.0000   YYZZ     -64.0555
+      XZZZ       0.0000   YZZZ      -0.0000   ZZZZ     -46.6968
+ -----------------------------------------------------------------
+ DrvMan is completing analytic gradient of the MP2 energy
+ MP2 relaxed dipole moment
+            1
+    1  -0.0000000
+    2  -0.0000001
+    3  -0.0000000
+	Magnitude:	 0.000 au	 0.000 Debye
+ MP2 energy read as -231.728546
+ Full Analytical Gradient of MP2 Energy (in au.)
+             1             2             3             4             5
+    1    0.00882850   -0.01104150   -0.00552073    0.00441423    0.00552076
+    2   -0.00000000    0.00000003   -0.00956224    0.00764571   -0.00956222
+    3   -0.00000000   -0.00000000    0.00000000   -0.00000000   -0.00000000
+             6             7             8             9            10
+    1   -0.00441426    0.01104150   -0.00882850    0.00552074   -0.00441423
+    2    0.00764570    0.00000001   -0.00000002    0.00956223   -0.00764571
+    3   -0.00000000    0.00000000   -0.00000000   -0.00000000    0.00000000
+            11            12
+    1   -0.00552077    0.00441426
+    2    0.00956221   -0.00764569
+    3   -0.00000000    0.00000000
+ Gradient time:  CPU 0.26 s  wall 0.41 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+       12      78       0       0       0       0       0       0
+
+
+** GEOMETRY OPTIMIZATION IN DELOCALIZED INTERNAL COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   1
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  H         2.4858298379    0.0000000000    0.0000000000
+      2  C         1.3911349566    0.0000000000    0.0000000000
+      3  C         0.6955674783    1.2047582125    0.0000000000
+      4  H         1.2429149189    2.1527917891    0.0000000000
+      5  C        -0.6955674783    1.2047582125    0.0000000000
+      6  H        -1.2429149189    2.1527917891    0.0000000000
+      7  C        -1.3911349566    0.0000000000    0.0000000000
+      8  H        -2.4858298379    0.0000000000    0.0000000000
+      9  C        -0.6955674783   -1.2047582125    0.0000000000
+     10  H        -1.2429149189   -2.1527917891    0.0000000000
+     11  C         0.6955674783   -1.2047582125    0.0000000000
+     12  H         1.2429149189   -2.1527917891    0.0000000000
+   Point Group: d6h   Number of degrees of freedom:     2
+
+
+   Energy is   -231.728546442
+
+
+ Attempting to Generate Delocalized Internal Coordinates
+
+  2 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     0.342757    0.471218
+
+ Minimum Search - Taking Simple RFO Step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =  -0.00142091
+ Step Taken.  Stepsize is  0.063870
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.021245      0.000300      NO
+         Displacement       0.059478      0.001200      NO
+         Energy change     *********      0.000001      NO
+
+
+ New Cartesian Coordinates Obtained by Inverse Iteration
+
+ Displacement from previous Coordinates is:  0.052628
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      H       2.4747336476     0.0000000000     0.0000000000
+    2      C       1.3936126880     0.0000000000     0.0000000000
+    3      C       0.6968063440     1.2069039908     0.0000000000
+    4      H       1.2373668238     2.1431822064     0.0000000000
+    5      C      -0.6968063440     1.2069039908     0.0000000000
+    6      H      -1.2373668238     2.1431822064     0.0000000000
+    7      C      -1.3936126880     0.0000000000     0.0000000000
+    8      H      -2.4747336476     0.0000000000     0.0000000000
+    9      C      -0.6968063440    -1.2069039908     0.0000000000
+   10      H      -1.2373668238    -2.1431822064     0.0000000000
+   11      C       0.6968063440    -1.2069039908     0.0000000000
+   12      H       1.2373668238    -2.1431822064     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D6h   NOp = 24
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =   203.7254165702 hartrees
+ There are       21 alpha and       21 beta electrons
+ Applying Cartesian multipole field
+    Component          Value
+    ---------          -----
+     (2,0,0)        1.00000E-11
+     (0,2,0)        2.00000E-11
+     (0,0,2)       -3.00000E-10
+ Nucleus-field energy     =     0.0000000057 hartrees
+ Requested basis set is cc-pVTZ
+ There are 96 shells and 264 basis functions
+ Requested basis set is rimp2-cc-pVTZ
+ There are 198 shells and 666 basis functions
+ A cutoff of  1.0D-11 yielded   4428 shell pairs
+ There are     33684 function pairs (     43731 Cartesian)
+ Smallest overlap matrix eigenvalue = 3.76E-05
+ Guess MOs from SCF MO coefficient file
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -230.7792998420      1.63e-04  
+    2    -230.7795152412      3.04e-05  
+    3    -230.7795262092      6.33e-06  
+    4    -230.7795270027      1.99e-06  
+    5    -230.7795270664      5.65e-07  
+    6    -230.7795270705      9.94e-08  
+    7    -230.7795270707      1.12e-08  
+    8    -230.7795270707      9.64e-10  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 321.92s  wall 81.00s 
+ SCF   energy in the final basis set =     -230.7795270707
+ Total energy in the final basis set =     -230.7795270707
+
+
+ --------------------------------------------------------------
+  Generalized many-body perturbation theory program
+  by Joonho Lee, Fazle Rob, Xintian Feng, Evgeny Epifanovsky
+
+         1      0.00046904     MINRES Iteration
+         2      0.00010835     MINRES Iteration
+         3      0.00002074     MINRES Iteration
+         4      0.00000292     MINRES Iteration
+         5      0.00000040     MINRES Done
+
+ In RI-MP2 calculation: 
+ # of frozen core orbitals: 6
+
+ Components of the RIMP2 correlation energy:
+        aaaa    correlation energy =        -0.1188184242 a.u.
+        abab    correlation energy =        -0.7121872988 a.u.
+        bbbb    correlation energy =        -0.1188184242 a.u.
+        non-Brillouin singles      =        -0.0000000000 a.u.
+        total same-spin energy     =        -0.2376368485 a.u.
+        total opposite-spin energy =        -0.7121872988 a.u.
+
+ Total  RIMP2   correlation energy =        -0.9498241473 a.u.
+        RIMP2         total energy =      -231.7293512180 a.u.
+
+ RI-MP2 Gradient Time:  CPU 1369.24 s  wall 345.71 s
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.231  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.214   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.623   1.731   1.731   1.741   1.769   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.386   3.386   3.387   3.409   3.409   3.429   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.669
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.669   3.691   3.691   3.712   3.712   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.060   4.065   4.103   4.103
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.137   4.137   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.210   4.210   4.331   4.331   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.430   4.430   4.467   4.467   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.679   4.679
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.888   4.899   4.899   5.000   5.065   5.067
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.067   5.111   5.111   5.124   5.124   5.176   5.270   5.326
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.375   5.381   5.381   5.384   5.425   5.425   5.538   5.538
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.744   5.744   5.822   6.076   6.076   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.524   6.524   6.866   7.342   9.457  13.079  13.079
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.608  13.608  16.234
+ 30 E2g  30 E2g  20 B1u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.231  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.214   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.623   1.731   1.731   1.741   1.769   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.386   3.386   3.387   3.409   3.409   3.429   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.669
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.669   3.691   3.691   3.712   3.712   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.060   4.065   4.103   4.103
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.137   4.137   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.210   4.210   4.331   4.331   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.430   4.430   4.467   4.467   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.679   4.679
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.888   4.899   4.899   5.000   5.065   5.067
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.067   5.111   5.111   5.124   5.124   5.176   5.270   5.326
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.375   5.381   5.381   5.384   5.425   5.425   5.538   5.538
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.744   5.744   5.822   6.076   6.076   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.524   6.524   6.866   7.342   9.457  13.079  13.079
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.608  13.608  16.234
+ 30 E2g  30 E2g  20 B1u                                                        
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.151537
+      2 C                    -0.151537
+      3 C                    -0.151537
+      4 H                     0.151537
+      5 C                    -0.151537
+      6 H                     0.151537
+      7 C                    -0.151537
+      8 H                     0.151537
+      9 C                    -0.151537
+     10 H                     0.151537
+     11 C                    -0.151537
+     12 H                     0.151537
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -32.1357     XY       0.0000     YY     -32.1357
+        XZ       0.0000     YZ       0.0000     ZZ     -39.9758
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY      -0.0000    XYY      -0.0000
+       YYY      -0.0000    XXZ      -0.0000    XYZ      -0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -275.1138   XXXY       0.0000   XXYY     -91.7046
+      XYYY      -0.0000   YYYY    -275.1138   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ       0.0000   YYYZ      -0.0000
+      XXZZ     -63.7661   XYZZ       0.0000   YYZZ     -63.7661
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ     -46.6469
+ -----------------------------------------------------------------
+ DrvMan is completing analytic gradient of the MP2 energy
+ MP2 relaxed dipole moment
+            1
+    1   0.0000000
+    2   0.0000000
+    3   0.0000000
+	Magnitude:	 0.000 au	 0.000 Debye
+ MP2 energy read as -231.729351
+ Full Analytical Gradient of MP2 Energy (in au.)
+             1             2             3             4             5
+    1   -0.00021366    0.00023184    0.00011592   -0.00010683   -0.00011592
+    2    0.00000000   -0.00000000    0.00020078   -0.00018504    0.00020078
+    3   -0.00000000    0.00000000   -0.00000000    0.00000000    0.00000000
+             6             7             8             9            10
+    1    0.00010683   -0.00023184    0.00021366   -0.00011592    0.00010683
+    2   -0.00018504   -0.00000000    0.00000000   -0.00020078    0.00018504
+    3   -0.00000000    0.00000000   -0.00000000    0.00000000    0.00000000
+            11            12
+    1    0.00011592   -0.00010683
+    2   -0.00020078    0.00018504
+    3    0.00000000   -0.00000000
+ Gradient time:  CPU 0.24 s  wall 0.23 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+       12      78       0       0       0       0       0       0
+
+ Cartesian Hessian Update
+ Hessian Updated using BFGS Update
+
+
+** GEOMETRY OPTIMIZATION IN DELOCALIZED INTERNAL COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   2
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  H         2.4747336476    0.0000000000    0.0000000000
+      2  C         1.3936126880    0.0000000000    0.0000000000
+      3  C         0.6968063440    1.2069039908    0.0000000000
+      4  H         1.2373668238    2.1431822064    0.0000000000
+      5  C        -0.6968063440    1.2069039908    0.0000000000
+      6  H        -1.2373668238    2.1431822064    0.0000000000
+      7  C        -1.3936126880    0.0000000000    0.0000000000
+      8  H        -2.4747336476    0.0000000000    0.0000000000
+      9  C        -0.6968063440   -1.2069039908    0.0000000000
+     10  H        -1.2373668238   -2.1431822064    0.0000000000
+     11  C         0.6968063440   -1.2069039908    0.0000000000
+     12  H         1.2373668238   -2.1431822064    0.0000000000
+   Point Group: d6h   Number of degrees of freedom:     2
+
+
+   Energy is   -231.729351218
+
+ Hessian Updated using BFGS Update
+
+  2 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     0.352319    0.471125
+
+ Minimum Search - Taking Simple RFO Step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =   0.00000000
+ Step Taken.  Stepsize is  0.001488
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.000469      0.000300      NO
+         Displacement       0.001311      0.001200      NO
+         Energy change     -0.000805      0.000001      NO
+
+
+ New Cartesian Coordinates Obtained by Inverse Iteration
+
+ Displacement from previous Coordinates is:  0.001397
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      H       2.4750347531     0.0000000000     0.0000000000
+    2      C       1.3935929418     0.0000000000     0.0000000000
+    3      C       0.6967964709     1.2068868901     0.0000000000
+    4      H       1.2375173766     2.1434429715     0.0000000000
+    5      C      -0.6967964709     1.2068868901     0.0000000000
+    6      H      -1.2375173766     2.1434429715     0.0000000000
+    7      C      -1.3935929418     0.0000000000     0.0000000000
+    8      H      -2.4750347531     0.0000000000     0.0000000000
+    9      C      -0.6967964709    -1.2068868901     0.0000000000
+   10      H      -1.2375173766    -2.1434429715     0.0000000000
+   11      C       0.6967964709    -1.2068868901     0.0000000000
+   12      H       1.2375173766    -2.1434429715     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D6h   NOp = 24
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =   203.7187448999 hartrees
+ There are       21 alpha and       21 beta electrons
+ Applying Cartesian multipole field
+    Component          Value
+    ---------          -----
+     (2,0,0)        1.00000E-11
+     (0,2,0)        2.00000E-11
+     (0,0,2)       -3.00000E-10
+ Nucleus-field energy     =     0.0000000057 hartrees
+ Requested basis set is cc-pVTZ
+ There are 96 shells and 264 basis functions
+ Requested basis set is rimp2-cc-pVTZ
+ There are 198 shells and 666 basis functions
+ A cutoff of  1.0D-11 yielded   4428 shell pairs
+ There are     33684 function pairs (     43731 Cartesian)
+ Smallest overlap matrix eigenvalue = 3.76E-05
+ Guess MOs from SCF MO coefficient file
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -230.7795080230      3.81e-06  
+    2    -230.7795081370      6.77e-07  
+    3    -230.7795081424      1.50e-07  
+    4    -230.7795081428      4.28e-08  
+    5    -230.7795081428      1.53e-08  
+    6    -230.7795081428      2.21e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 240.85s  wall 60.00s 
+ SCF   energy in the final basis set =     -230.7795081428
+ Total energy in the final basis set =     -230.7795081428
+
+
+ --------------------------------------------------------------
+  Generalized many-body perturbation theory program
+  by Joonho Lee, Fazle Rob, Xintian Feng, Evgeny Epifanovsky
+
+         1      0.00046914     MINRES Iteration
+         2      0.00010838     MINRES Iteration
+         3      0.00002074     MINRES Iteration
+         4      0.00000292     MINRES Iteration
+         5      0.00000040     MINRES Done
+
+ In RI-MP2 calculation: 
+ # of frozen core orbitals: 6
+
+ Components of the RIMP2 correlation energy:
+        aaaa    correlation energy =        -0.1188201686 a.u.
+        abab    correlation energy =        -0.7122031277 a.u.
+        bbbb    correlation energy =        -0.1188201686 a.u.
+        non-Brillouin singles      =        -0.0000000000 a.u.
+        total same-spin energy     =        -0.2376403373 a.u.
+        total opposite-spin energy =        -0.7122031277 a.u.
+
+ Total  RIMP2   correlation energy =        -0.9498434650 a.u.
+        RIMP2         total energy =      -231.7293516078 a.u.
+
+ RI-MP2 Gradient Time:  CPU 1368.19 s  wall 345.34 s
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.606  13.606  16.233
+ 30 E2g  30 E2g  20 B1u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.606  13.606  16.233
+ 30 E2g  30 E2g  20 B1u                                                        
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.151403
+      2 C                    -0.151403
+      3 C                    -0.151403
+      4 H                     0.151403
+      5 C                    -0.151403
+      6 H                     0.151403
+      7 C                    -0.151403
+      8 H                     0.151403
+      9 C                    -0.151403
+     10 H                     0.151403
+     11 C                    -0.151403
+     12 H                     0.151403
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -32.1368     XY       0.0000     YY     -32.1368
+        XZ       0.0000     YZ       0.0000     ZZ     -39.9777
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ       0.0000    XYZ      -0.0000
+       YYZ      -0.0000    XZZ      -0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -275.1431   XXXY      -0.0000   XXYY     -91.7144
+      XYYY       0.0000   YYYY    -275.1431   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ      -0.0000   YYYZ       0.0000
+      XXZZ     -63.7759   XYZZ       0.0000   YYZZ     -63.7759
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ     -46.6494
+ -----------------------------------------------------------------
+ DrvMan is completing analytic gradient of the MP2 energy
+ MP2 relaxed dipole moment
+            1
+    1  -0.0000000
+    2   0.0000000
+    3  -0.0000000
+	Magnitude:	 0.000 au	 0.000 Debye
+ MP2 energy read as -231.729352
+ Full Analytical Gradient of MP2 Energy (in au.)
+             1             2             3             4             5
+    1    0.00000876   -0.00000581   -0.00000291    0.00000438    0.00000291
+    2    0.00000000   -0.00000000   -0.00000503    0.00000758   -0.00000503
+    3   -0.00000000   -0.00000000    0.00000000   -0.00000000    0.00000000
+             6             7             8             9            10
+    1   -0.00000438    0.00000581   -0.00000876    0.00000291   -0.00000438
+    2    0.00000758   -0.00000000    0.00000000    0.00000503   -0.00000758
+    3    0.00000000   -0.00000000    0.00000000   -0.00000000    0.00000000
+            11            12
+    1   -0.00000291    0.00000438
+    2    0.00000503   -0.00000758
+    3    0.00000000   -0.00000000
+ Gradient time:  CPU 0.24 s  wall 0.22 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+       12      78       0       0       0       0       0       0
+
+ Cartesian Hessian Update
+ Hessian Updated using BFGS Update
+
+
+** GEOMETRY OPTIMIZATION IN DELOCALIZED INTERNAL COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   3
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  H         2.4750347531    0.0000000000    0.0000000000
+      2  C         1.3935929418    0.0000000000    0.0000000000
+      3  C         0.6967964709    1.2068868901    0.0000000000
+      4  H         1.2375173766    2.1434429715    0.0000000000
+      5  C        -0.6967964709    1.2068868901    0.0000000000
+      6  H        -1.2375173766    2.1434429715    0.0000000000
+      7  C        -1.3935929418    0.0000000000    0.0000000000
+      8  H        -2.4750347531    0.0000000000    0.0000000000
+      9  C        -0.6967964709   -1.2068868901    0.0000000000
+     10  H        -1.2375173766   -2.1434429715    0.0000000000
+     11  C         0.6967964709   -1.2068868901    0.0000000000
+     12  H         1.2375173766   -2.1434429715    0.0000000000
+   Point Group: d6h   Number of degrees of freedom:     2
+
+
+   Energy is   -231.729351608
+
+ Hessian Updated using BFGS Update
+
+  2 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     0.366921    0.470434
+
+ Minimum Search - Taking Simple RFO Step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =   0.00000000
+ Step Taken.  Stepsize is  0.000060
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.000017      0.000300     YES
+         Displacement       0.000043      0.001200     YES
+         Energy change     -0.000000      0.000001     YES
+
+
+                       Distance Matrix (Angstroms)
+             H (  1)   C (  2)   C (  3)   H (  4)   C (  5)   H (  6)
+   C (  2)  1.081442
+   C (  3)  2.149118  1.393593
+   H (  4)  2.475035  2.149118  1.081442
+   C (  5)  3.393684  2.413774  1.393593  2.149118
+   H (  6)  4.286886  3.393684  2.149118  2.475035  1.081442
+   C (  7)  3.868628  2.787186  2.413774  3.393684  1.393593  2.149118
+   H (  8)  4.950070  3.868628  3.393684  4.286886  2.149118  2.475035
+   C (  9)  3.393684  2.413774  2.787186  3.868628  2.413774  3.393684
+   H ( 10)  4.286886  3.393684  3.868628  4.950070  3.393684  4.286886
+   C ( 11)  2.149118  1.393593  2.413774  3.393684  2.787186  3.868628
+   H ( 12)  2.475035  2.149118  3.393684  4.286886  3.868628  4.950070
+             C (  7)   H (  8)   C (  9)   H ( 10)   C ( 11)
+   H (  8)  1.081442
+   C (  9)  1.393593  2.149118
+   H ( 10)  2.149118  2.475035  1.081442
+   C ( 11)  2.413774  3.393684  1.393593  2.149118
+   H ( 12)  3.393684  4.286886  2.149118  2.475035  1.081442
+
+ Final energy is   -231.72935160777308     
+
+
+ ******************************
+ **  OPTIMIZATION CONVERGED  **
+ ******************************
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  H         2.4750347531    0.0000000000    0.0000000000
+      2  C         1.3935929418    0.0000000000    0.0000000000
+      3  C         0.6967964709    1.2068868901    0.0000000000
+      4  H         1.2375173766    2.1434429715    0.0000000000
+      5  C        -0.6967964709    1.2068868901    0.0000000000
+      6  H        -1.2375173766    2.1434429715    0.0000000000
+      7  C        -1.3935929418    0.0000000000    0.0000000000
+      8  H        -2.4750347531    0.0000000000    0.0000000000
+      9  C        -0.6967964709   -1.2068868901    0.0000000000
+     10  H        -1.2375173766   -2.1434429715    0.0000000000
+     11  C         0.6967964709   -1.2068868901    0.0000000000
+     12  H         1.2375173766   -2.1434429715    0.0000000000
+
+Z-matrix Print:
+$molecule
+0 1
+C 
+H  1 1.081442
+C  1 1.393593 2 120.000000
+H  3 1.081442 1 120.000000 2 -0.000000 0
+C  3 1.393593 1 120.000000 2 -180.000000 0
+H  5 1.081442 3 120.000000 1 -180.000000 0
+C  5 1.393593 3 120.000000 1 -0.000000 0
+H  7 1.081442 5 120.000000 3 -180.000000 0
+C  7 1.393593 5 120.000000 3 -0.000000 0
+H  9 1.081442 7 120.000000 5 -180.000000 0
+C  9 1.393593 7 120.000000 5 -0.000000 0
+H  11 1.081442 9 120.000000 7 -180.000000 0
+$end
+
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.606  13.606  16.233
+ 30 E2g  30 E2g  20 B1u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 A1g   1 E1u   1 E1u   1 E2g   1 E2g   1 B1u   2 A1g   2 E1u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 E1u   2 E2g   2 E2g   3 A1g   2 B1u   1 B2u   3 E1u   3 E1u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 A2u   3 E2g   3 E2g   1 E1g   1 E1g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  1 E2u   1 E2u   4 A1g   4 E1u   4 E1u   4 E2g   4 E2g   3 B1u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  1 B2g   5 E2g   5 E2g   2 B2u   5 A1g   5 E1u   5 E1u   2 A2u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  2 E1g   2 E1g   6 A1g   6 E1u   6 E1u   4 B1u   2 E2u   2 E2u                
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+  6 E2g   6 E2g   7 E1u   7 E1u   3 A2u   7 E2g   7 E2g   7 A1g                
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  1 A2g   2 B2g   5 B1u   8 E2g   8 E2g   8 E1u   8 E1u   1 B1g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  3 E1g   3 E1g   9 E1u   9 E1u   2 A2g   3 E2u   3 E2u   6 B1u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+  8 A1g   9 E2g   9 E2g   3 B2u   4 A2u   7 B1u   3 B2g   4 E2u                
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  4 E2u  10 E2g  10 E2g   4 E1g   4 E1g  10 E1u  10 E1u   9 A1g                
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 11 E1u  11 E1u   4 B2u   3 A2g  12 E1u  12 E1u   5 E1g   5 E1g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 11 E2g  11 E2g   5 E2u   5 E2u  12 E2g  12 E2g  13 E1u  13 E1u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+  8 B1u  13 E2g  13 E2g  10 A1g   4 B2g   1 A1u   9 B1u   4 A2g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 14 E2g  14 E2g  10 B1u  14 E1u  14 E1u   5 A2u  11 A1g   6 E1g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  6 E1g   5 B2u  15 E1u  15 E1u   6 E2u   6 E2u   2 B1g  12 A1g                
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 15 E2g  15 E2g  16 E1u  16 E1u   6 A2u   5 B2g  16 E2g  16 E2g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+  6 B2u   7 E2u   7 E2u   7 A2u   7 E1g   7 E1g  17 E1u  17 E1u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+  8 E1g   8 E1g  13 A1g  11 B1u  17 E2g  17 E2g   8 A2u   9 E1g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+  9 E1g  18 E2g  18 E2g  18 E1u  18 E1u  14 A1g   8 E2u   8 E2u                
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 19 E1u  19 E1u   7 B2u  19 E2g  19 E2g  15 A1g   9 E2u   9 E2u                
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 12 B1u   3 B1g   5 A2g  10 E2u  10 E2u   6 B2g   2 A1u  20 E1u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 20 E1u  20 E2g  20 E2g  21 E1u  21 E1u  10 E1g  10 E1g  13 B1u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 21 E2g  21 E2g   4 B1g   7 B2g  16 A1g   3 A1u  11 E1g  11 E1g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 22 E1u  22 E1u   9 A2u   8 B2u  22 E2g  22 E2g   6 A2g  11 E2u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 11 E2u  14 B1u  12 E1g  12 E1g  23 E1u  23 E1u  15 B1u   7 A2g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 12 E2u  12 E2u  23 E2g  23 E2g  17 A1g   9 B2u   8 B2g  24 E2g                
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 24 E2g  16 B1u  13 E1g  13 E1g  13 E2u  13 E2u  24 E1u  24 E1u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 25 E2g  25 E2g  18 A1g  26 E2g  26 E2g  10 A2u   9 B2g  25 E1u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 25 E1u  26 E1u  26 E1u  14 E1g  14 E1g   4 A1u  10 B2u  19 A1g                
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+  8 A2g  14 E2u  14 E2u  17 B1u  27 E2g  27 E2g  27 E1u  27 E1u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 28 E1u  28 E1u  10 B2g  28 E2g  28 E2g  18 B1u  29 E2g  29 E2g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+  9 A2g  29 E1u  29 E1u  19 B1u  10 A2g  20 A1g  30 E1u  30 E1u                
+ 13.606  13.606  16.233
+ 30 E2g  30 E2g  20 B1u                                                        
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.151403
+      2 C                    -0.151403
+      3 C                    -0.151403
+      4 H                     0.151403
+      5 C                    -0.151403
+      6 H                     0.151403
+      7 C                    -0.151403
+      8 H                     0.151403
+      9 C                    -0.151403
+     10 H                     0.151403
+     11 C                    -0.151403
+     12 H                     0.151403
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -32.1368     XY       0.0000     YY     -32.1368
+        XZ       0.0000     YZ       0.0000     ZZ     -39.9777
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ       0.0000    XYZ      -0.0000
+       YYZ      -0.0000    XZZ      -0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -275.1431   XXXY      -0.0000   XXYY     -91.7144
+      XYYY       0.0000   YYYY    -275.1431   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ      -0.0000   YYYZ       0.0000
+      XXZZ     -63.7759   XYZZ       0.0000   YYZZ     -63.7759
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ     -46.6494
+ -----------------------------------------------------------------
+Archival summary:
+1\1\node3\OPT\ProcedureUnspecified\BasisUnspecified\66\krylov\WedSep511:23:152018WedSep511:23:152018\0\\#,OPT,ProcedureUnspecified,BasisUnspecified,\\0,1\C\H,1,1.08144\C,1,1.39359,2,120\H,3,1.08144,1,120,2,-0,0\C,3,1.39359,1,120,2,-180,0\H,5,1.08144,3,120,1,-180,0\C,5,1.39359,3,120,1,-0,0\H,7,1.08144,5,120,3,-180,0\C,7,1.39359,5,120,3,-0,0\H,9,1.08144,7,120,5,-180,0\C,9,1.39359,7,120,5,-0,0\H,11,1.08144,9,120,7,-180,0\\HF=-230.779508\\@
+
+ Total job time:  1199.03s(wall), 4730.04s(cpu) 
+ Wed Sep  5 11:23:15 2018
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+

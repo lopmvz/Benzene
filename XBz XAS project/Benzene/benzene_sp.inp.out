@@ -1,0 +1,1302 @@
+Q-Chem Developer Version!
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.1, Q-Chem, Inc., Pleasanton, CA (2018)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,  
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,  
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,  
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,  
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,  
+ Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,  J. Gonthier,  A. Gunina,  
+ D. Hait,  M. W. D. Hanson-Heine,  P. H. P. Harbach,  A. W. Hauser,  
+ J. E. Herr,  E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  
+ T.-C. Jagau,  Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  
+ P. Klunzinger,  K. Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  
+ C. M. Krauter,  A. Kunitsa,  Ka Un Lao,  A. Laurent,  K. V. Lawler,  
+ Joonho Lee,  D. Lefrancois,  S. Lehtola,  D. S. Levine,  Yi-Pei Li,  
+ You-Sheng Lin,  Fenglai Liu,  E. Livshits,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  T. M. Perrine,  F. Plasser,  P. Pokhilko,  S. Prager,  
+ A. Prociuk,  E. Ramos,  D. R. Rehn,  F. Rob,  M. Schneider,  N. Sergueev,  
+ S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  T. Stein,  
+ Yu-Chuan Su,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  
+ L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  
+ C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  
+ T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.1.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Sep  6 00:25:14 2018  
+
+node20
+Host: 0
+
+     Scratch files written to /scratch/krylov/qchem10397//
+Core orbitals will be frozen
+Input Ideriv = 1
+Curr. Ideriv = -1
+Max.  Ideriv = 1
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+RI-MP2/cc-pVTZ optimized geometry. EOM-IP calculations.
+$end
+
+$molecule
+0 1
+    H         2.4750347531    0.0000000000    0.0000000000
+    C         1.3935929418    0.0000000000    0.0000000000
+    C         0.6967964709    1.2068868901    0.0000000000
+    H         1.2375173766    2.1434429715    0.0000000000
+    C        -0.6967964709    1.2068868901    0.0000000000
+    H        -1.2375173766    2.1434429715    0.0000000000
+    C        -1.3935929418    0.0000000000    0.0000000000
+    H        -2.4750347531    0.0000000000    0.0000000000
+    C        -0.6967964709   -1.2068868901    0.0000000000
+    H        -1.2375173766   -2.1434429715    0.0000000000
+    C         0.6967964709   -1.2068868901    0.0000000000
+    H         1.2375173766   -2.1434429715    0.0000000000
+$end
+
+$rem
+   JOB_TYPE  =  SP
+   BASIS  =  cc-pVTZ
+   METHOD  =  EOM-CCSD
+   IP_STATES = [2,2,2,2,2,2,2,2] 
+   CC_MEMORY = 80000   
+! use SP code 
+  cc_single_prec=1
+  eom_single_prec=1
+  cc_sp_dm = 1
+  cc_sp_t_conv = 4
+  cc_sp_e_conv = 6
+  cc_erase_dp_integrals = 1
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      H       2.4750347531     0.0000000000    -0.0000000000
+    2      C       1.3935929418     0.0000000000    -0.0000000000
+    3      C       0.6967964709     1.2068868901     0.0000000000
+    4      H       1.2375173766     2.1434429715     0.0000000000
+    5      C      -0.6967964709     1.2068868901     0.0000000000
+    6      H      -1.2375173766     2.1434429715     0.0000000000
+    7      C      -1.3935929418     0.0000000000     0.0000000000
+    8      H      -2.4750347531     0.0000000000     0.0000000000
+    9      C      -0.6967964709    -1.2068868901    -0.0000000000
+   10      H      -1.2375173766    -2.1434429715    -0.0000000000
+   11      C       0.6967964709    -1.2068868901    -0.0000000000
+   12      H       1.2375173766    -2.1434429715    -0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D2h   NOp =  8
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =   203.7187449024 hartrees
+ There are       21 alpha and       21 beta electrons
+ Requested basis set is cc-pVTZ
+ There are 96 shells and 264 basis functions
+MEM_TOTAL is adjusted to CC_MEMORY + MEM_STATIC!
+ Total memory of 80192MB is distributed as follows: 
+   QALLOC including MEM_STATIC uses 192MB
+   MEM_STATIC is set to 192MB
+   CCMAN JOB total memory use is  80000MB
+ Warning: actual memory use might exceed 80192MB
+
+ Total QAlloc Memory Limit    192 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+                       Distance Matrix (Angstroms)
+             H (  1)   C (  2)   C (  3)   H (  4)   C (  5)   H (  6)
+   C (  2)  1.081442
+   C (  3)  2.149118  1.393593
+   H (  4)  2.475035  2.149118  1.081442
+   C (  5)  3.393684  2.413774  1.393593  2.149118
+   H (  6)  4.286886  3.393684  2.149118  2.475035  1.081442
+   C (  7)  3.868628  2.787186  2.413774  3.393684  1.393593  2.149118
+   H (  8)  4.950070  3.868628  3.393684  4.286886  2.149118  2.475035
+   C (  9)  3.393684  2.413774  2.787186  3.868628  2.413774  3.393684
+   H ( 10)  4.286886  3.393684  3.868628  4.950070  3.393684  4.286886
+   C ( 11)  2.149118  1.393593  2.413774  3.393684  2.787186  3.868628
+   H ( 12)  2.475035  2.149118  3.393684  4.286886  3.868628  4.950070
+             C (  7)   H (  8)   C (  9)   H ( 10)   C ( 11)
+   H (  8)  1.081442
+   C (  9)  1.393593  2.149118
+   H ( 10)  2.149118  2.475035  1.081442
+   C ( 11)  2.413774  3.393684  1.393593  2.149118
+   H ( 12)  3.393684  4.286886  2.149118  2.475035  1.081442
+
+ A cutoff of  1.0D-14 yielded   4506 shell pairs
+ There are     34422 function pairs (     44637 Cartesian)
+
+ -------------------------------------------------------
+ OpenMP Integral Computing Module                       
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients                     0
+ long-range coefficients              100000000
+ Omega coefficients                           0
+ if combine SR and LR in K                    0
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                776718
+ size of scratch memory is              4657032
+ max col of scratch BK array              10000
+ max len of scratch array in speh3          662
+ max len of scratch index in speh4           32
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  3
+ order of int derivative is                   0
+ number of shells is                         96
+ number of basis is                         300
+ number of cartesian basis is               300
+ number of contracted shell pairs          4506
+ number of primitive shell pairs          13698
+ maxK2 (contraction) of shell pair           49
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair            618
+ max number of PS2 of shell pair           2226
+ mem total for path MDJ                  624864
+ -------------------------------------------------------
+ Smallest overlap matrix eigenvalue = 3.76E-05
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000057 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 42.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 8 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -233.2460284927      3.41e-02  
+    2    -230.7144861484      2.24e-03  
+    3    -230.7740984139      6.39e-04  
+    4    -230.7788005727      2.77e-04  
+    5    -230.7795000134      2.06e-05  
+    6    -230.7795078968      3.26e-06  
+    7    -230.7795081243      8.82e-07  
+    8    -230.7795081419      1.30e-07  
+    9    -230.7795081421      1.45e-08  
+   10    -230.7795081426      2.04e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 87.92s  wall 12.00s 
+ SCF   energy in the final basis set =     -230.7795081426
+ Total energy in the final basis set =     -230.7795081426
+
+
+ ------------------------------------------------------------------------------
+
+   CCMAN2: suite of methods based on coupled cluster
+           and equation of motion theories.
+
+   Components:
+   * libvmm-1.3-trunk
+     by Evgeny Epifanovsky, Ilya Kaliman.
+   * libtensor-2.5-trunk
+     by Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer, 
+        Ilya Kaliman.
+   * libcc-2.5-trunk
+     by Evgeny Epifanovsky, Arik Landau, Tomasz Kus, Kirill Khistyaev, 
+        Dmitry Zuev, Prashant Manohar, Xintian Feng, Anna Krylov, 
+        Matthew Goldey, Alec White, Thomas Jagau, Kaushik Nanda, 
+        Anastasia Gunina, Alexander Kunitsa, Joonho Lee.
+
+   CCMAN original authors:
+   Anna I. Krylov, C. David Sherrill, Steven R. Gwaltney,
+   Edward F. C. Byrd (2000)
+   Sergey V. Levchenko, Lyudmila V. Slipchenko, Tao Wang,
+   Ana-Maria C. Cristian (2003)
+   Piotr A. Pieniazek, C. Melania Oana, Evgeny Epifanovsky (2007)
+   Prashant Manohar (2009)
+
+ ------------------------------------------------------------------------------
+
+
+ Allocating and initializing 80000MB of RAM...
+ Calculation will run on 8 cores.
+
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 Ag    1 B3u   1 B2u   2 Ag    1 B1g   2 B3u   3 Ag    3 B3u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 B2u   4 Ag    2 B1g   5 Ag    4 B3u   3 B2u   5 B3u   4 B2u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 B1u   6 Ag    3 B1g   1 B2g   1 B3g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  2 B1u   1 Au    7 Ag    6 B3u   5 B2u   8 Ag    4 B1g   7 B3u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  2 B2g   5 B1g   9 Ag    6 B2u  10 Ag    8 B3u   7 B2u   3 B1u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  3 B2g   2 B3g  11 Ag    9 B3u   8 B2u  10 B3u   4 B1u   2 Au                 
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+ 12 Ag    6 B1g  11 B3u   9 B2u   5 B1u  13 Ag    7 B1g  14 Ag                 
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  8 B1g   4 B2g  12 B3u   9 B1g  15 Ag   10 B2u  13 B3u   3 B3g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  5 B2g   4 B3g  14 B3u  11 B2u  10 B1g   6 B1u   3 Au   15 B3u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+ 16 Ag   17 Ag   11 B1g  12 B2u   7 B1u  16 B3u   6 B2g   4 Au                 
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  8 B1u  12 B1g  18 Ag    7 B2g   5 B3g  13 B2u  17 B3u  19 Ag                 
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 18 B3u  14 B2u  15 B2u  13 B1g  19 B3u  16 B2u   8 B2g   6 B3g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 20 Ag   14 B1g   9 B1u   5 Au   15 B1g  21 Ag   20 B3u  17 B2u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+ 21 B3u  22 Ag   16 B1g  23 Ag    9 B2g   6 Au   22 B3u  17 B1g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 18 B1g  24 Ag   23 B3u  18 B2u  24 B3u  10 B1u  25 Ag   10 B2g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  7 B3g  19 B2u  20 B2u  25 B3u  11 B1u   7 Au    8 B3g  26 Ag                 
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 27 Ag   19 B1g  26 B3u  21 B2u  12 B1u  11 B2g  28 Ag   20 B1g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+ 22 B2u   8 Au   13 B1u  14 B1u  12 B2g   9 B3g  27 B3u  23 B2u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+ 13 B2g  10 B3g  29 Ag   28 B3u  30 Ag   21 B1g  15 B1u  14 B2g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+ 11 B3g  31 Ag   22 B1g  24 B2u  29 B3u  32 Ag   16 B1u   9 Au                 
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 30 B3u  25 B2u  26 B2u  33 Ag   23 B1g  34 Ag   17 B1u  10 Au                 
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 31 B3u  12 B3g  24 B1g  11 Au   18 B1u  15 B2g  12 Au   32 B3u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 27 B2u  35 Ag   25 B1g  33 B3u  28 B2u  13 B3g  16 B2g  34 B3u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 26 B1g  36 Ag   14 B3g  17 B2g  37 Ag   13 Au   15 B3g  18 B2g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 29 B2u  35 B3u  19 B1u  30 B2u  38 Ag   27 B1g  28 B1g  20 B1u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 14 Au   36 B3u  19 B2g  16 B3g  37 B3u  31 B2u  38 B3u  29 B1g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 21 B1u  15 Au   39 Ag   30 B1g  40 Ag   32 B2u  20 B2g  41 Ag                 
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 31 B1g  39 B3u  17 B3g  21 B2g  22 B1u  16 Au   33 B2u  40 B3u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 32 B1g  42 Ag   43 Ag   44 Ag   33 B1g  23 B1u  22 B2g  34 B2u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 41 B3u  42 B3u  35 B2u  23 B2g  18 B3g  17 Au   36 B2u  45 Ag                 
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+ 34 B1g  24 B1u  18 Au   43 B3u  46 Ag   35 B1g  44 B3u  37 B2u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 45 B3u  38 B2u  24 B2g  36 B1g  47 Ag   46 B3u  48 Ag   37 B1g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+ 38 B1g  39 B2u  47 B3u  48 B3u  39 B1g  49 Ag   49 B3u  40 B2u                
+ 13.606  13.606  16.233
+ 50 Ag   40 B1g  50 B3u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 Ag    1 B3u   1 B2u   2 Ag    1 B1g   2 B3u   3 Ag    3 B3u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 B2u   4 Ag    2 B1g   5 Ag    4 B3u   3 B2u   5 B3u   4 B2u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 B1u   6 Ag    3 B1g   1 B2g   1 B3g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  2 B1u   1 Au    7 Ag    6 B3u   5 B2u   8 Ag    4 B1g   7 B3u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  2 B2g   5 B1g   9 Ag    6 B2u  10 Ag    8 B3u   7 B2u   3 B1u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  3 B2g   2 B3g  11 Ag    9 B3u   8 B2u  10 B3u   4 B1u   2 Au                 
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+ 12 Ag    6 B1g  11 B3u   9 B2u   5 B1u  13 Ag    7 B1g  14 Ag                 
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  8 B1g   4 B2g  12 B3u   9 B1g  15 Ag   10 B2u  13 B3u   3 B3g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  5 B2g   4 B3g  14 B3u  11 B2u  10 B1g   6 B1u   3 Au   15 B3u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+ 16 Ag   17 Ag   11 B1g  12 B2u   7 B1u  16 B3u   6 B2g   4 Au                 
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  8 B1u  12 B1g  18 Ag    7 B2g   5 B3g  13 B2u  17 B3u  19 Ag                 
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 18 B3u  14 B2u  15 B2u  13 B1g  19 B3u  16 B2u   8 B2g   6 B3g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 20 Ag   14 B1g   9 B1u   5 Au   15 B1g  21 Ag   20 B3u  17 B2u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+ 21 B3u  22 Ag   16 B1g  23 Ag    9 B2g   6 Au   22 B3u  17 B1g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 18 B1g  24 Ag   23 B3u  18 B2u  24 B3u  10 B1u  25 Ag   10 B2g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  7 B3g  19 B2u  20 B2u  25 B3u  11 B1u   7 Au    8 B3g  26 Ag                 
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 27 Ag   19 B1g  26 B3u  21 B2u  12 B1u  11 B2g  28 Ag   20 B1g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+ 22 B2u   8 Au   13 B1u  14 B1u  12 B2g   9 B3g  27 B3u  23 B2u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+ 13 B2g  10 B3g  29 Ag   28 B3u  30 Ag   21 B1g  15 B1u  14 B2g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+ 11 B3g  31 Ag   22 B1g  24 B2u  29 B3u  32 Ag   16 B1u   9 Au                 
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 30 B3u  25 B2u  26 B2u  33 Ag   23 B1g  34 Ag   17 B1u  10 Au                 
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 31 B3u  12 B3g  24 B1g  11 Au   18 B1u  15 B2g  12 Au   32 B3u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 27 B2u  35 Ag   25 B1g  33 B3u  28 B2u  13 B3g  16 B2g  34 B3u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 26 B1g  36 Ag   14 B3g  17 B2g  37 Ag   13 Au   15 B3g  18 B2g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 29 B2u  35 B3u  19 B1u  30 B2u  38 Ag   27 B1g  28 B1g  20 B1u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 14 Au   36 B3u  19 B2g  16 B3g  37 B3u  31 B2u  38 B3u  29 B1g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 21 B1u  15 Au   39 Ag   30 B1g  40 Ag   32 B2u  20 B2g  41 Ag                 
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 31 B1g  39 B3u  17 B3g  21 B2g  22 B1u  16 Au   33 B2u  40 B3u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 32 B1g  42 Ag   43 Ag   44 Ag   33 B1g  23 B1u  22 B2g  34 B2u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 41 B3u  42 B3u  35 B2u  23 B2g  18 B3g  17 Au   36 B2u  45 Ag                 
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+ 34 B1g  24 B1u  18 Au   43 B3u  46 Ag   35 B1g  44 B3u  37 B2u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 45 B3u  38 B2u  24 B2g  36 B1g  47 Ag   46 B3u  48 Ag   37 B1g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+ 38 B1g  39 B2u  47 B3u  48 B3u  39 B1g  49 Ag   49 B3u  40 B2u                
+ 13.606  13.606  16.233
+ 50 Ag   40 B1g  50 B3u                                                        
+
+ Occupation and symmetry of molecular orbitals
+
+ Point group: D2h (8 irreducible representations).
+
+                           Ag   B1g  B2g  B3g  Au   B1u  B2u  B3u   All 
+ ------------------------------------------------------------------------
+ All molecular orbitals:
+  - Alpha                  50   40   24   18   18   24   40   50    264 
+  - Beta                   50   40   24   18   18   24   40   50    264 
+ ------------------------------------------------------------------------
+ Alpha orbitals:
+  - Frozen occupied        2    1    0    0    0    0    1    2     6   
+  - Active occupied        4    2    1    1    0    1    3    3     15  
+  - Active virtual         44   37   23   17   18   23   36   45    243 
+  - Frozen virtual         0    0    0    0    0    0    0    0     0   
+ ------------------------------------------------------------------------
+ Beta orbitals:
+  - Frozen occupied        2    1    0    0    0    0    1    2     6   
+  - Active occupied        4    2    1    1    0    1    3    3     15  
+  - Active virtual         44   37   23   17   18   23   36   45    243 
+  - Frozen virtual         0    0    0    0    0    0    0    0     0   
+ ------------------------------------------------------------------------
+
+ Import integrals:   CPU 0.00 s  wall 0.00 s
+
+ Import integrals:   CPU 657.87 s  wall 95.78 s
+
+ MP2 amplitudes:   CPU 25.10 s  wall 22.94 s
+
+Running a single precision version
+I will use integrals, stored in single precision format
+           CCSD T amplitudes will be solved using DIIS.
+
+           Start     Size      MaxIter   EConv     TConv     
+           3         7         100       1.00e-06  1.00e-04  
+ ------------------------------------------------------------------------------
+           Energy (a.u.)   Ediff      Tdiff       Comment
+ ------------------------------------------------------------------------------
+          -231.72948077                           
+     1    -231.72334814   6.13e-03   9.49e-01     
+     2    -231.75114463   2.78e-02   1.28e-01     
+     3    -231.75067025   4.74e-04   4.51e-02     
+     4    -231.75310767   2.44e-03   1.27e-02     Switched to DIIS steps.
+     5    -231.75391948   8.12e-04   1.07e-02     
+     6    -231.75392638   6.91e-06   1.91e-03     
+     7    -231.75391799   8.39e-06   6.61e-04     
+     8    -231.75391657   1.42e-06   1.34e-04     
+     9    -231.75391698   4.08e-07   3.69e-05     
+ ------------------------------------------------------------------------------
+          -231.75391698                           CCSD T converged.
+
+End of single precision
+No iterations in double precision will be done
+ SCF energy                 = -230.77950814
+ MP2 energy                 = -231.72948024
+ CCSD correlation energy     =   -0.97440871
+ CCSD total energy           = -231.75391686
+
+ CCSD  T1^2 = 0.0062  T2^2 = 0.3537  Leading amplitudes:
+
+ Amplitude    Orbitals with energies
+  0.0219       1 (B3g) A                 ->    2 (B3g) A                  
+              -0.3353                          0.4746                     
+  0.0219       1 (B3g) B                 ->    2 (B3g) B                  
+              -0.3353                          0.4746                     
+  0.0219       1 (B2g) A                 ->    3 (B2g) A                  
+              -0.3353                          0.4746                     
+  0.0219       1 (B2g) B                 ->    3 (B2g) B                  
+              -0.3353                          0.4746                     
+
+ Amplitude    Orbitals with energies
+ -0.0803       1 (B2g) A     1 (B2g) B   ->    2 (B1u) A     2 (B1u) B    
+              -0.3353       -0.3353            0.1287        0.1287       
+  0.0803       1 (B2g) A     1 (B2g) B   ->    2 (B1u) B     2 (B1u) A    
+              -0.3353       -0.3353            0.1287        0.1287       
+  0.0803       1 (B2g) B     1 (B2g) A   ->    2 (B1u) A     2 (B1u) B    
+              -0.3353       -0.3353            0.1287        0.1287       
+ -0.0803       1 (B2g) B     1 (B2g) A   ->    2 (B1u) B     2 (B1u) A    
+              -0.3353       -0.3353            0.1287        0.1287       
+
+ Computing CCSD intemediates for later calculations in single precision
+ Finished.
+
+ CCSD calculation:   CPU 619.18 s  wall 129.10 s
+
+        Solving for EOMIP-CCSD Ag transitions.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     1.29e-01   15.1914   20.7626   
+      1    0      4     4.46e-02   12.7893   18.3017   
+      2    0      6     1.46e-03   12.1951   17.4764   
+      3    0      8     2.14e-04   12.1691   17.4092   
+      4    1      10    2.65e-05   12.1676*  17.4028   
+      5    2      11    6.86e-06   12.1676*  17.4005*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/Ag
+ Total energy = -231.30676602 a.u.  Excitation energy = 12.1676 eV.
+ R1^2 = 0.9289  R2^2 = 0.0711  Res^2 = 8.29e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9633       6 (Ag) A                  ->    infty        
+  0.0322       4 (Ag) A                  ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               10      Occ  Alpha       4 (Ag)     -0.8224
+               18      Occ  Alpha       6 (Ag)     -0.4931
+
+
+ EOMIP transition 2/Ag
+ Total energy = -231.11445957 a.u.  Excitation energy = 17.4005 eV.
+ R1^2 = 0.8930  R2^2 = 0.1070  Res^2 = 5.44e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9448       5 (Ag) A                  ->    infty        
+ -0.0189       3 (Ag) A                  ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               7       Occ  Alpha       3 (Ag)     -1.1483
+               12      Occ  Alpha       5 (Ag)     -0.7080
+
+
+        Solving for EOMIP-CCSD B1g transitions.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     1.42e-01   15.1875   23.7934   
+      1    0      4     4.82e-02   12.7725   20.7287   
+      2    0      6     1.80e-03   12.1868   19.7446   
+      3    0      8     1.70e-04   12.1684   19.6560   
+      4    1      10    2.63e-05   12.1671*  19.6444   
+      5    2      11    5.34e-06   12.1671*  19.6423*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B1g
+ Total energy = -231.30678334 a.u.  Excitation energy = 12.1671 eV.
+ R1^2 = 0.9289  R2^2 = 0.0711  Res^2 = 2.21e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9633       3 (B1g) A                 ->    infty        
+ -0.0321       2 (B1g) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               11      Occ  Alpha       2 (B1g)     -0.8224
+               19      Occ  Alpha       3 (B1g)     -0.4931
+
+
+ EOMIP transition 2/B1g
+ Total energy = -231.03207574 a.u.  Excitation energy = 19.6423 eV.
+ R1^2 = 0.8635  R2^2 = 0.1365  Res^2 = 8.46e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.9287       2 (B1g) A                 ->    infty        
+ -0.0313       3 (B1g) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               11      Occ  Alpha       2 (B1g)     -0.8224
+               19      Occ  Alpha       3 (B1g)     -0.4931
+
+
+        Solving for EOMIP-CCSD B2g transitions.
+
+Warning! Not enough singles to form guess subspace. Doubles guess vectors will be generated.
+In case of poor EOM convergence, reduce requested IP_STATES.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     7.06e-02   11.4384   118.5062   
+      1    0      4     4.82e-01   9.7775   58.9687   
+      2    0      6     1.68e-01   9.3298   37.9072   
+      3    0      8     4.55e-02   9.3097   27.1993   
+      4    1      10    4.48e-03   9.3084*  24.3636   
+      5    1      11    6.59e-04   9.3084*  24.0519   
+      6    1      12    1.50e-04   9.3084*  24.0041   
+      7    1      13    5.69e-05   9.3084*  23.9908   
+      8    1      14    1.32e-04   9.3084*  23.9786   
+      9    1      15    1.15e-02   9.3084*  23.4673   
+      10   1      16    5.21e-03   9.3084*  22.2357   
+      11   1      17    1.17e-03   9.3084*  21.8200   
+      12   1      18    2.13e-04   9.3084*  21.7448   
+      13   1      19    1.51e-04   9.3084*  21.7231   
+      14   1      20    3.54e-03   9.3084*  21.6243   
+      15   1      21    3.98e-03   9.3084*  20.5896   
+      16   1      22    7.08e-04   9.3084*  20.3338   
+      17   1      23    1.03e-04   9.3084*  20.2946   
+      18   1      24    3.02e-05   9.3084*  20.2874   
+      19   1      25    6.15e-05   9.3084*  20.2836   
+      20   1      26    7.54e-02   9.3084*  15.7195   
+      21   1      27    1.58e-02   9.3084*  10.3503   
+      22   1      28    1.03e-03   9.3084*  9.7159   
+      23   1      29    5.21e-05   9.3084*  9.6823   
+      24   2      30    4.56e-06   9.3084*  9.6798*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B2g
+ Total energy = -231.41183958 a.u.  Excitation energy = 9.3084 eV.
+ R1^2 = 0.9422  R2^2 = 0.0578  Res^2 = 7.84e-07
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9707       1 (B2g) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.3353
+
+
+ EOMIP transition 2/B2g
+ Total energy = -231.39819126 a.u.  Excitation energy = 9.6798 eV.
+ R1^2 = 0.0005  R2^2 = 0.9995  Res^2 = 8.34e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.9717       4 (B3u) A     5 (B3u) A   ->    2 (B2g) A    
+  0.8508       5 (B3u) A     4 (B3u) A   ->    2 (B2g) A    
+ -0.3876       3 (B3u) A     4 (B3u) A   ->    2 (B2g) A    
+ -0.2590       4 (B3u) A     3 (B3u) A   ->    2 (B2g) A    
+  0.1998       5 (Ag) A      6 (Ag) A    ->    2 (B2g) A    
+  0.1295       6 (Ag) A      5 (Ag) A    ->    2 (B2g) A    
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               12      Occ  Alpha       5 (Ag)     -0.7080
+               18      Occ  Alpha       6 (Ag)     -0.4931
+               8       Occ  Alpha       3 (B3u)     -1.0129
+               13      Occ  Alpha       4 (B3u)     -0.6426
+               15      Occ  Alpha       5 (B3u)     -0.5863
+               30      Vir  Alpha       2 (B2g)      0.3309
+
+
+        Solving for EOMIP-CCSD B3g transitions.
+
+Warning! Not enough singles to form guess subspace. Doubles guess vectors will be generated.
+In case of poor EOM convergence, reduce requested IP_STATES.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     6.68e-02   11.4384   113.8110   
+      1    0      4     4.82e-01   9.7775   58.9691   
+      2    0      6     1.68e-01   9.3295   37.8846   
+      3    0      8     5.09e-02   9.3096   27.4925   
+      4    1      10    4.63e-03   9.3084*  24.3715   
+      5    1      11    6.78e-04   9.3084*  24.0530   
+      6    1      12    1.48e-04   9.3084*  24.0053   
+      7    1      13    5.27e-05   9.3084*  23.9925   
+      8    1      14    7.17e-05   9.3084*  23.9839   
+      9    1      15    3.43e-03   9.3084*  23.9153   
+      10   1      16    7.65e-03   9.3084*  22.4937   
+      11   1      17    1.94e-03   9.3084*  21.8505   
+      12   1      18    4.42e-04   9.3084*  21.7170   
+      13   1      19    5.20e-04   9.3084*  21.6612   
+      14   1      20    9.68e-03   9.3084*  21.2427   
+      15   1      21    2.68e-03   9.3084*  20.3778   
+      16   1      22    4.68e-04   9.3084*  20.2094   
+      17   1      23    6.73e-05   9.3084*  20.1842   
+      18   1      24    1.42e-05   9.3084*  20.1796   
+      19   2      25    4.03e-06   9.3084*  20.1786*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B3g
+ Total energy = -231.41183962 a.u.  Excitation energy = 9.3084 eV.
+ R1^2 = 0.9422  R2^2 = 0.0578  Res^2 = 7.66e-07
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.9707       1 (B3g) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               21      Occ  Alpha       1 (B3g)     -0.3353
+
+
+ EOMIP transition 2/B3g
+ Total energy = -231.01236812 a.u.  Excitation energy = 20.1786 eV.
+ R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 7.30e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.3217       1 (B2g) A     1 (B3g) B   ->    2 (B2g) B    
+  0.3217       1 (B3g) B     1 (B2g) A   ->    2 (B2g) B    
+  0.3214       1 (B3g) A     1 (B2g) B   ->    2 (B2g) B    
+ -0.3214       1 (B2g) B     1 (B3g) A   ->    2 (B2g) B    
+ -0.3207       1 (B1u) A     1 (B2g) B   ->    1 (Au) B     
+  0.3207       1 (B2g) B     1 (B1u) A   ->    1 (Au) B     
+  0.3204       1 (B1u) A     1 (B3g) B   ->    2 (B1u) B    
+ -0.3204       1 (B3g) B     1 (B1u) A   ->    2 (B1u) B    
+ -0.3194       1 (B3g) A     1 (B1u) B   ->    2 (B1u) B    
+  0.3194       1 (B1u) B     1 (B3g) A   ->    2 (B1u) B    
+  0.3179       1 (B2g) A     1 (B1u) B   ->    1 (Au) B     
+ -0.3179       1 (B1u) B     1 (B2g) A   ->    1 (Au) B     
+  0.3171       1 (B2g) A     1 (B3g) A   ->    2 (B2g) A    
+ -0.3171       1 (B3g) A     1 (B2g) A   ->    2 (B2g) A    
+ -0.3149       1 (B2g) A     1 (B1u) A   ->    1 (Au) A     
+  0.3149       1 (B1u) A     1 (B2g) A   ->    1 (Au) A     
+  0.3128       1 (B3g) A     1 (B1u) A   ->    2 (B1u) A    
+ -0.3128       1 (B1u) A     1 (B3g) A   ->    2 (B1u) A    
+  0.1254       1 (B2g) A     1 (B3g) B   ->    4 (B2g) B    
+ -0.1254       1 (B3g) B     1 (B2g) A   ->    4 (B2g) B    
+ -0.1254       1 (B3g) A     1 (B2g) B   ->    4 (B2g) B    
+  0.1254       1 (B2g) B     1 (B3g) A   ->    4 (B2g) B    
+ -0.1238       1 (B2g) A     1 (B3g) A   ->    4 (B2g) A    
+  0.1238       1 (B3g) A     1 (B2g) A   ->    4 (B2g) A    
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.3353
+               21      Occ  Alpha       1 (B3g)     -0.3353
+               17      Occ  Alpha       1 (B1u)     -0.5009
+               20      Occ  Beta        1 (B2g)     -0.3353
+               21      Occ  Beta        1 (B3g)     -0.3353
+               17      Occ  Beta        1 (B1u)     -0.5009
+               30      Vir  Alpha       2 (B2g)      0.3309
+               55      Vir  Alpha       4 (B2g)      0.6682
+               23      Vir  Alpha       1 (Au)      0.1287
+               22      Vir  Alpha       2 (B1u)      0.1287
+               30      Vir  Beta        2 (B2g)      0.3309
+               55      Vir  Beta        4 (B2g)      0.6682
+               23      Vir  Beta        1 (Au)      0.1287
+               22      Vir  Beta        2 (B1u)      0.1287
+
+
+        Solving for EOMIP-CCSD Au transitions.
+
+Warning! Not enough singles to form guess subspace. Doubles guess vectors will be generated.
+In case of poor EOM convergence, reduce requested IP_STATES.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     4.70e-02   130.0782   130.7190   
+      1    0      4     4.09e-01   123.2983   124.9958   
+      2    0      6     5.61e-02   111.2192   113.4765   
+      3    0      8     5.46e-02   99.5704   101.3800   
+      4    0      10    5.34e-02   90.9062   91.3523   
+      5    0      12    4.96e-02   81.9758   82.2345   
+      6    0      14    4.90e-02   73.0093   73.4688   
+      7    0      16    6.07e-02   64.7841   66.0114   
+      8    0      18    6.44e-02   57.0546   58.2652   
+      9    0      20    6.21e-02   48.1243   50.6916   
+      10   0      22    3.17e-02   39.3826   42.5134   
+      11   0      24    2.15e-02   33.4505   34.0957   
+      12   0      26    5.19e-02   22.2871   29.3582   
+      13   0      28    2.07e-02   18.6127   26.2715   
+      14   0      30    1.35e-02   18.0025   21.0667   
+      15   0      32    5.80e-03   17.8790   19.2362   
+      16   0      34    1.75e-03   17.8458   18.5517   
+      17   0      36    2.62e-04   17.8361   18.4193   
+      18   1      38    3.55e-05   17.8345*  18.4029   
+      19   2      39    7.11e-06   17.8344*  18.4009*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/Au
+ Total energy = -231.09851392 a.u.  Excitation energy = 17.8344 eV.
+ R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 6.49e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.5479       1 (B3g) A     1 (B2g) B   ->    2 (B1u) B    
+  0.5479       1 (B2g) B     1 (B3g) A   ->    2 (B1u) B    
+ -0.5459       1 (B2g) A     1 (B3g) A   ->    2 (B1u) A    
+  0.5459       1 (B3g) A     1 (B2g) A   ->    2 (B1u) A    
+  0.5459       1 (B2g) A     1 (B3g) B   ->    2 (B1u) B    
+ -0.5459       1 (B3g) B     1 (B2g) A   ->    2 (B1u) B    
+ -0.1243       1 (B3g) A     1 (B1u) A   ->    2 (B2g) A    
+  0.1243       1 (B1u) A     1 (B3g) A   ->    2 (B2g) A    
+ -0.1237       1 (B1u) A     1 (B3g) B   ->    2 (B2g) B    
+  0.1237       1 (B3g) B     1 (B1u) A   ->    2 (B2g) B    
+  0.1235       1 (B3g) A     1 (B1u) B   ->    2 (B2g) B    
+ -0.1235       1 (B1u) B     1 (B3g) A   ->    2 (B2g) B    
+ -0.1062       1 (B3g) A     1 (B2g) B   ->    4 (B1u) B    
+  0.1062       1 (B2g) B     1 (B3g) A   ->    4 (B1u) B    
+  0.1061       1 (B2g) A     1 (B3g) B   ->    4 (B1u) B    
+ -0.1061       1 (B3g) B     1 (B2g) A   ->    4 (B1u) B    
+ -0.1056       1 (B2g) A     1 (B3g) A   ->    4 (B1u) A    
+  0.1056       1 (B3g) A     1 (B2g) A   ->    4 (B1u) A    
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.3353
+               21      Occ  Alpha       1 (B3g)     -0.3353
+               17      Occ  Alpha       1 (B1u)     -0.5009
+               20      Occ  Beta        1 (B2g)     -0.3353
+               21      Occ  Beta        1 (B3g)     -0.3353
+               17      Occ  Beta        1 (B1u)     -0.5009
+               30      Vir  Alpha       2 (B2g)      0.3309
+               22      Vir  Alpha       2 (B1u)      0.1287
+               44      Vir  Alpha       4 (B1u)      0.5736
+               30      Vir  Beta        2 (B2g)      0.3309
+               22      Vir  Beta        2 (B1u)      0.1287
+               44      Vir  Beta        4 (B1u)      0.5736
+
+
+ EOMIP transition 2/Au
+ Total energy = -231.07769734 a.u.  Excitation energy = 18.4009 eV.
+ R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 7.74e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.7203       1 (B3g) A     1 (B3g) B   ->    1 (Au) B     
+  0.7203       1 (B3g) B     1 (B3g) A   ->    1 (Au) B     
+ -0.4528       1 (B2g) A     1 (B3g) B   ->    2 (B1u) B    
+  0.4528       1 (B3g) B     1 (B2g) A   ->    2 (B1u) B    
+ -0.3431       1 (B3g) A     1 (B2g) B   ->    2 (B1u) B    
+  0.3431       1 (B2g) B     1 (B3g) A   ->    2 (B1u) B    
+  0.1829       1 (B1u) A     1 (B3g) B   ->    2 (B2g) B    
+ -0.1829       1 (B3g) B     1 (B1u) A   ->    2 (B2g) B    
+ -0.1569       1 (B3g) A     1 (B3g) B   ->    2 (Au) B     
+  0.1569       1 (B3g) B     1 (B3g) A   ->    2 (Au) B     
+ -0.1100       1 (B2g) A     1 (B3g) A   ->    2 (B1u) A    
+  0.1100       1 (B3g) A     1 (B2g) A   ->    2 (B1u) A    
+  0.1030       1 (B3g) A     1 (B1u) B   ->    2 (B2g) B    
+ -0.1030       1 (B1u) B     1 (B3g) A   ->    2 (B2g) B    
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.3353
+               21      Occ  Alpha       1 (B3g)     -0.3353
+               17      Occ  Alpha       1 (B1u)     -0.5009
+               20      Occ  Beta        1 (B2g)     -0.3353
+               21      Occ  Beta        1 (B3g)     -0.3353
+               17      Occ  Beta        1 (B1u)     -0.5009
+               22      Vir  Alpha       2 (B1u)      0.1287
+               30      Vir  Beta        2 (B2g)      0.3309
+               23      Vir  Beta        1 (Au)      0.1287
+               45      Vir  Beta        2 (Au)      0.5736
+               22      Vir  Beta        2 (B1u)      0.1287
+
+
+        Solving for EOMIP-CCSD B1u transitions.
+
+Warning! Not enough singles to form guess subspace. Doubles guess vectors will be generated.
+In case of poor EOM convergence, reduce requested IP_STATES.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     6.90e-02   15.4577   111.8967   
+      1    0      4     4.82e-01   13.4653   59.1823   
+      2    0      6     2.12e-01   12.7126   34.3560   
+      3    0      8     9.55e-03   12.6460   22.4038   
+      4    1      10    8.89e-04   12.6438*  21.9147   
+      5    1      11    2.49e-04   12.6436*  21.8597   
+      6    1      12    3.25e-02   12.6436*  20.3669   
+      7    1      13    3.06e-03   12.6436*  18.5808   
+      8    1      14    2.99e-04   12.6436*  18.4300   
+      9    1      15    7.13e-05   12.6436*  18.4110   
+      10   1      16    4.57e-05   12.6436*  18.4039   
+      11   1      17    1.29e-05   12.6436*  18.4008   
+      12   2      18    2.57e-06   12.6436*  18.4005*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B1u
+ Total energy = -231.28927245 a.u.  Excitation energy = 12.6436 eV.
+ R1^2 = 0.9005  R2^2 = 0.0995  Res^2 = 1.72e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.9489       1 (B1u) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               17      Occ  Alpha       1 (B1u)     -0.5009
+
+
+ EOMIP transition 2/B1u
+ Total energy = -231.07771170 a.u.  Excitation energy = 18.4005 eV.
+ R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 3.42e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.7214       1 (B2g) A     1 (B2g) B   ->    2 (B1u) B    
+  0.7214       1 (B2g) B     1 (B2g) A   ->    2 (B1u) B    
+ -0.4429       1 (B3g) A     1 (B2g) B   ->    1 (Au) B     
+  0.4429       1 (B2g) B     1 (B3g) A   ->    1 (Au) B     
+ -0.3497       1 (B2g) A     1 (B3g) B   ->    1 (Au) B     
+  0.3497       1 (B3g) B     1 (B2g) A   ->    1 (Au) B     
+  0.1816       1 (B1u) A     1 (B2g) B   ->    2 (B2g) B    
+ -0.1816       1 (B2g) B     1 (B1u) A   ->    2 (B2g) B    
+ -0.1574       1 (B2g) A     1 (B2g) B   ->    4 (B1u) B    
+  0.1574       1 (B2g) B     1 (B2g) A   ->    4 (B1u) B    
+  0.1192       1 (B2g) A     1 (B3g) A   ->    1 (Au) A     
+ -0.1192       1 (B3g) A     1 (B2g) A   ->    1 (Au) A     
+  0.1047       1 (B2g) A     1 (B1u) B   ->    2 (B2g) B    
+ -0.1047       1 (B1u) B     1 (B2g) A   ->    2 (B2g) B    
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.3353
+               21      Occ  Alpha       1 (B3g)     -0.3353
+               17      Occ  Alpha       1 (B1u)     -0.5009
+               20      Occ  Beta        1 (B2g)     -0.3353
+               21      Occ  Beta        1 (B3g)     -0.3353
+               17      Occ  Beta        1 (B1u)     -0.5009
+               23      Vir  Alpha       1 (Au)      0.1287
+               30      Vir  Beta        2 (B2g)      0.3309
+               23      Vir  Beta        1 (Au)      0.1287
+               22      Vir  Beta        2 (B1u)      0.1287
+               44      Vir  Beta        4 (B1u)      0.5736
+
+
+        Solving for EOMIP-CCSD B2u transitions.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     1.47e-01   17.5826   18.6342   
+      1    0      4     4.82e-02   15.1611   15.6892   
+      2    0      6     1.24e-03   14.4825   14.8978   
+      3    0      8     1.48e-04   14.4405   14.8649   
+      4    1      10    1.32e-05   14.4365   14.8616*  
+      5    2      11    4.32e-06   14.4353*  14.8616*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B2u
+ Total energy = -231.22342993 a.u.  Excitation energy = 14.4353 eV.
+ R1^2 = 0.9166  R2^2 = 0.0834  Res^2 = 1.71e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.9568       4 (B2u) A                 ->    infty        
+ -0.0326       2 (B2u) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               9       Occ  Alpha       2 (B2u)     -1.0129
+               16      Occ  Alpha       4 (B2u)     -0.5863
+
+
+ EOMIP transition 2/B2u
+ Total energy = -231.20776165 a.u.  Excitation energy = 14.8616 eV.
+ R1^2 = 0.9090  R2^2 = 0.0910  Res^2 = 6.93e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9534       3 (B2u) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               14      Occ  Alpha       3 (B2u)     -0.6172
+
+
+        Solving for EOMIP-CCSD B3u transitions.
+
+Running a single precision version
+      EOMIP-CCSD/MP2 right amplitudes will be solved using Davidson.
+      Amplitudes will be solved using standard  algorithm
+      Roots     MaxVec    MaxIter   Precond   Conv      Thresh    Shift    
+      2         60        60        1         1.00e-05  1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      2     1.23e-01   17.5826   18.9595   
+      1    0      4     4.24e-02   15.1611   16.6099   
+      2    0      6     1.53e-03   14.4826   15.9143   
+      3    0      8     1.60e-04   14.4405   15.8679   
+      4    1      10    1.43e-05   14.4365   15.8645*  
+      5    2      11    5.37e-06   14.4353*  15.8645*  
+
+     Davidson procedure converged
+
+ EOMIP transition 1/B3u
+ Total energy = -231.22342998 a.u.  Excitation energy = 14.4353 eV.
+ R1^2 = 0.9166  R2^2 = 0.0834  Res^2 = 1.72e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9568       5 (B3u) A                 ->    infty        
+  0.0326       3 (B3u) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               8       Occ  Alpha       3 (B3u)     -1.0129
+               15      Occ  Alpha       5 (B3u)     -0.5863
+
+
+ EOMIP transition 2/B3u
+ Total energy = -231.17090549 a.u.  Excitation energy = 15.8645 eV.
+ R1^2 = 0.9045  R2^2 = 0.0955  Res^2 = 9.03e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.9510       4 (B3u) A                 ->    infty        
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               13      Occ  Alpha       4 (B3u)     -0.6426
+
+
+ EOMIP-CCSD calculation:   CPU 310.77 s  wall 76.19 s
+
+ Total ccman2 time:   CPU 1645.18 s  wall 331.71 s
+
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 Ag    1 B3u   1 B2u   2 Ag    1 B1g   2 B3u   3 Ag    3 B3u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 B2u   4 Ag    2 B1g   5 Ag    4 B3u   3 B2u   5 B3u   4 B2u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 B1u   6 Ag    3 B1g   1 B2g   1 B3g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  2 B1u   1 Au    7 Ag    6 B3u   5 B2u   8 Ag    4 B1g   7 B3u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  2 B2g   5 B1g   9 Ag    6 B2u  10 Ag    8 B3u   7 B2u   3 B1u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  3 B2g   2 B3g  11 Ag    9 B3u   8 B2u  10 B3u   4 B1u   2 Au                 
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+ 12 Ag    6 B1g  11 B3u   9 B2u   5 B1u  13 Ag    7 B1g  14 Ag                 
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  8 B1g   4 B2g  12 B3u   9 B1g  15 Ag   10 B2u  13 B3u   3 B3g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  5 B2g   4 B3g  14 B3u  11 B2u  10 B1g   6 B1u   3 Au   15 B3u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+ 16 Ag   17 Ag   11 B1g  12 B2u   7 B1u  16 B3u   6 B2g   4 Au                 
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  8 B1u  12 B1g  18 Ag    7 B2g   5 B3g  13 B2u  17 B3u  19 Ag                 
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 18 B3u  14 B2u  15 B2u  13 B1g  19 B3u  16 B2u   8 B2g   6 B3g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 20 Ag   14 B1g   9 B1u   5 Au   15 B1g  21 Ag   20 B3u  17 B2u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+ 21 B3u  22 Ag   16 B1g  23 Ag    9 B2g   6 Au   22 B3u  17 B1g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 18 B1g  24 Ag   23 B3u  18 B2u  24 B3u  10 B1u  25 Ag   10 B2g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  7 B3g  19 B2u  20 B2u  25 B3u  11 B1u   7 Au    8 B3g  26 Ag                 
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 27 Ag   19 B1g  26 B3u  21 B2u  12 B1u  11 B2g  28 Ag   20 B1g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+ 22 B2u   8 Au   13 B1u  14 B1u  12 B2g   9 B3g  27 B3u  23 B2u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+ 13 B2g  10 B3g  29 Ag   28 B3u  30 Ag   21 B1g  15 B1u  14 B2g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+ 11 B3g  31 Ag   22 B1g  24 B2u  29 B3u  32 Ag   16 B1u   9 Au                 
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 30 B3u  25 B2u  26 B2u  33 Ag   23 B1g  34 Ag   17 B1u  10 Au                 
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 31 B3u  12 B3g  24 B1g  11 Au   18 B1u  15 B2g  12 Au   32 B3u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 27 B2u  35 Ag   25 B1g  33 B3u  28 B2u  13 B3g  16 B2g  34 B3u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 26 B1g  36 Ag   14 B3g  17 B2g  37 Ag   13 Au   15 B3g  18 B2g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 29 B2u  35 B3u  19 B1u  30 B2u  38 Ag   27 B1g  28 B1g  20 B1u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 14 Au   36 B3u  19 B2g  16 B3g  37 B3u  31 B2u  38 B3u  29 B1g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 21 B1u  15 Au   39 Ag   30 B1g  40 Ag   32 B2u  20 B2g  41 Ag                 
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 31 B1g  39 B3u  17 B3g  21 B2g  22 B1u  16 Au   33 B2u  40 B3u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 32 B1g  42 Ag   43 Ag   44 Ag   33 B1g  23 B1u  22 B2g  34 B2u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 41 B3u  42 B3u  35 B2u  23 B2g  18 B3g  17 Au   36 B2u  45 Ag                 
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+ 34 B1g  24 B1u  18 Au   43 B3u  46 Ag   35 B1g  44 B3u  37 B2u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 45 B3u  38 B2u  24 B2g  36 B1g  47 Ag   46 B3u  48 Ag   37 B1g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+ 38 B1g  39 B2u  47 B3u  48 B3u  39 B1g  49 Ag   49 B3u  40 B2u                
+ 13.606  13.606  16.233
+ 50 Ag   40 B1g  50 B3u                                                        
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.234 -11.233 -11.233 -11.232 -11.232 -11.232  -1.148  -1.013
+  1 Ag    1 B3u   1 B2u   2 Ag    1 B1g   2 B3u   3 Ag    3 B3u                
+ -1.013  -0.822  -0.822  -0.708  -0.643  -0.617  -0.586  -0.586
+  2 B2u   4 Ag    2 B1g   5 Ag    4 B3u   3 B2u   5 B3u   4 B2u                
+ -0.501  -0.493  -0.493  -0.335  -0.335
+  1 B1u   6 Ag    3 B1g   1 B2g   1 B3g                                        
+ -- Virtual --                   
+  0.129   0.129   0.146   0.170   0.170   0.202   0.202   0.222
+  2 B1u   1 Au    7 Ag    6 B3u   5 B2u   8 Ag    4 B1g   7 B3u                
+  0.331   0.360   0.360   0.394   0.418   0.420   0.420   0.432
+  2 B2g   5 B1g   9 Ag    6 B2u  10 Ag    8 B3u   7 B2u   3 B1u                
+  0.475   0.475   0.509   0.522   0.522   0.554   0.574   0.574
+  3 B2g   2 B3g  11 Ag    9 B3u   8 B2u  10 B3u   4 B1u   2 Au                 
+  0.590   0.590   0.595   0.595   0.625   0.642   0.642   0.643
+ 12 Ag    6 B1g  11 B3u   9 B2u   5 B1u  13 Ag    7 B1g  14 Ag                 
+  0.643   0.668   0.703   0.727   0.727   0.750   0.750   0.844
+  8 B1g   4 B2g  12 B3u   9 B1g  15 Ag   10 B2u  13 B3u   3 B3g                
+  0.860   0.860   0.906   0.906   0.953   0.959   0.959   1.000
+  5 B2g   4 B3g  14 B3u  11 B2u  10 B1g   6 B1u   3 Au   15 B3u                
+  1.009   1.032   1.032   1.084   1.123   1.132   1.213   1.219
+ 16 Ag   17 Ag   11 B1g  12 B2u   7 B1u  16 B3u   6 B2g   4 Au                 
+  1.219   1.229   1.229   1.295   1.295   1.313   1.313   1.314
+  8 B1u  12 B1g  18 Ag    7 B2g   5 B3g  13 B2u  17 B3u  19 Ag                 
+  1.380   1.380   1.482   1.494   1.510   1.510   1.511   1.511
+ 18 B3u  14 B2u  15 B2u  13 B1g  19 B3u  16 B2u   8 B2g   6 B3g                
+  1.513   1.513   1.593   1.593   1.607   1.607   1.620   1.620
+ 20 Ag   14 B1g   9 B1u   5 Au   15 B1g  21 Ag   20 B3u  17 B2u                
+  1.622   1.731   1.731   1.740   1.768   1.811   1.892   2.090
+ 21 B3u  22 Ag   16 B1g  23 Ag    9 B2g   6 Au   22 B3u  17 B1g                
+  2.187   2.187   2.224   2.295   2.295   2.334   2.358   2.444
+ 18 B1g  24 Ag   23 B3u  18 B2u  24 B3u  10 B1u  25 Ag   10 B2g                
+  2.444   2.466   2.475   2.475   2.539   2.539   2.605   2.663
+  7 B3g  19 B2u  20 B2u  25 B3u  11 B1u   7 Au    8 B3g  26 Ag                 
+  2.742   2.742   2.775   2.775   2.798   2.846   2.909   2.909
+ 27 Ag   19 B1g  26 B3u  21 B2u  12 B1u  11 B2g  28 Ag   20 B1g                
+  2.935   2.951   2.951   2.992   3.006   3.006   3.030   3.030
+ 22 B2u   8 Au   13 B1u  14 B1u  12 B2g   9 B3g  27 B3u  23 B2u                
+  3.064   3.064   3.084   3.107   3.164   3.164   3.228   3.229
+ 13 B2g  10 B3g  29 Ag   28 B3u  30 Ag   21 B1g  15 B1u  14 B2g                
+  3.229   3.301   3.301   3.323   3.323   3.343   3.378   3.378
+ 11 B3g  31 Ag   22 B1g  24 B2u  29 B3u  32 Ag   16 B1u   9 Au                 
+  3.385   3.385   3.387   3.409   3.409   3.428   3.443   3.443
+ 30 B3u  25 B2u  26 B2u  33 Ag   23 B1g  34 Ag   17 B1u  10 Au                 
+  3.454   3.458   3.505   3.613   3.613   3.619   3.662   3.668
+ 31 B3u  12 B3g  24 B1g  11 Au   18 B1u  15 B2g  12 Au   32 B3u                
+  3.668   3.691   3.691   3.711   3.711   3.714   3.714   3.775
+ 27 B2u  35 Ag   25 B1g  33 B3u  28 B2u  13 B3g  16 B2g  34 B3u                
+  3.909   3.909   3.918   3.924   4.059   4.065   4.102   4.102
+ 26 B1g  36 Ag   14 B3g  17 B2g  37 Ag   13 Au   15 B3g  18 B2g                
+  4.111   4.111   4.118   4.127   4.136   4.136   4.137   4.173
+ 29 B2u  35 B3u  19 B1u  30 B2u  38 Ag   27 B1g  28 B1g  20 B1u                
+  4.173   4.181   4.209   4.209   4.330   4.330   4.377   4.420
+ 14 Au   36 B3u  19 B2g  16 B3g  37 B3u  31 B2u  38 B3u  29 B1g                
+  4.429   4.429   4.466   4.466   4.490   4.500   4.513   4.541
+ 21 B1u  15 Au   39 Ag   30 B1g  40 Ag   32 B2u  20 B2g  41 Ag                 
+  4.541   4.575   4.668   4.668   4.674   4.674   4.678   4.678
+ 31 B1g  39 B3u  17 B3g  21 B2g  22 B1u  16 Au   33 B2u  40 B3u                
+  4.686   4.686   4.887   4.898   4.898   4.999   5.065   5.066
+ 32 B1g  42 Ag   43 Ag   44 Ag   33 B1g  23 B1u  22 B2g  34 B2u                
+  5.066   5.111   5.111   5.123   5.123   5.176   5.269   5.325
+ 41 B3u  42 B3u  35 B2u  23 B2g  18 B3g  17 Au   36 B2u  45 Ag                 
+  5.374   5.380   5.380   5.384   5.424   5.424   5.537   5.537
+ 34 B1g  24 B1u  18 Au   43 B3u  46 Ag   35 B1g  44 B3u  37 B2u                
+  5.743   5.743   5.821   6.075   6.075   6.101   6.276   6.276
+ 45 B3u  38 B2u  24 B2g  36 B1g  47 Ag   46 B3u  48 Ag   37 B1g                
+  6.373   6.523   6.523   6.865   7.341   9.453  13.076  13.076
+ 38 B1g  39 B2u  47 B3u  48 B3u  39 B1g  49 Ag   49 B3u  40 B2u                
+ 13.606  13.606  16.233
+ 50 Ag   40 B1g  50 B3u                                                        
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.151946
+      2 C                    -0.151946
+      3 C                    -0.151946
+      4 H                     0.151946
+      5 C                    -0.151946
+      6 H                     0.151946
+      7 C                    -0.151946
+      8 H                     0.151946
+      9 C                    -0.151946
+     10 H                     0.151946
+     11 C                    -0.151946
+     12 H                     0.151946
+  ----------------------------------------
+  Sum of atomic charges =    -0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -31.7708     XY      -0.0000     YY     -31.7708
+        XZ       0.0000     YZ      -0.0000     ZZ     -40.6101
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY      -0.0000    XXZ       0.0000    XYZ       0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -269.3848   XXXY      -0.0000   XXYY     -89.7949
+      XYYY       0.0000   YYYY    -269.3848   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ       0.0000   YYYZ      -0.0000
+      XXZZ     -64.1627   XYZZ      -0.0000   YYZZ     -64.1627
+      XZZZ       0.0000   YZZZ      -0.0000   ZZZZ     -48.5655
+ -----------------------------------------------------------------
+Archival summary:
+1\1\node20\SP\ProcedureUnspecified\BasisUnspecified\66\krylov\ThuSep600:31:242018ThuSep600:31:242018\0\\#,ProcedureUnspecified,BasisUnspecified,\\0,1\C\H,1,1.08144\C,1,1.39359,2,120\H,3,1.08144,1,120,2,-0,0\C,3,1.39359,1,120,2,180,0\H,5,1.08144,3,120,1,180,0\C,5,1.39359,3,120,1,-0,0\H,7,1.08144,5,120,3,180,0\C,7,1.39359,5,120,3,0,0\H,9,1.08144,7,120,5,180,0\C,9,1.39359,7,120,5,-0,0\H,11,1.08144,9,120,7,-180,0\\HF=-230.779508\\@
+
+ Total job time:  370.61s(wall), 1760.30s(cpu) 
+ Thu Sep  6 00:31:24 2018
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
