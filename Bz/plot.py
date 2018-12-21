@@ -59,7 +59,7 @@ yip = 0.55
 plt.xlabel('Excitation energy (eV)')
 plt.ylim(0.0,yip)
 plt.ylabel('                                             Intensity (arb. units)')
-plt.yticks([])
+#plt.yticks([])
 ax1.plot([ip1+x1shift,ip1+x1shift],[0,yip],'crimson',linewidth=1.0, dashes=[5, 2])
 ax1.plot(x1+x1shift, y1,'crimson', label='S$_0$', linewidth=2)
 #ax1.plot(x2+x1shift, y2*1, 'darkblue', label='S1($n\pi^*$)  x 10', linewidth=2)
