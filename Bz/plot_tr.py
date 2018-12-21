@@ -18,26 +18,33 @@ y1 = data1[:,1]
 stcksx1 = stcks1[:,0] 
 stcksy1 = stcks1[:,1]
 
-data2 = np.genfromtxt('b1u.dat')
-stcks2 = np.genfromtxt('b1u.txt')
+data2 = np.genfromtxt('1b1u.dat')
+stcks2 = np.genfromtxt('1b1u.txt')
 x2 = data2[:,0] 
 y2 = data2[:,1]
 stcksx2 = stcks2[:,0] 
 stcksy2 = stcks2[:,1]
 
-data3 = np.genfromtxt('b2u.dat')
-stcks3 = np.genfromtxt('b2u.txt')
+data3 = np.genfromtxt('2b2u.dat')
+stcks3 = np.genfromtxt('2b2u.txt')
 x3 = data3[:,0] 
 y3 = data3[:,1]
 stcksx3 = stcks3[:,0] 
 stcksy3 = stcks3[:,1]
 
-data4 = np.genfromtxt('b3u.dat')
-stcks4 = np.genfromtxt('b3u.txt')
+data4 = np.genfromtxt('2b3u.dat')
+stcks4 = np.genfromtxt('2b3u.txt')
 x4 = data4[:,0] 
 y4 = data4[:,1]
 stcksx4 = stcks4[:,0] 
 stcksy4 = stcks4[:,1]
+
+data5 = np.genfromtxt('1b2u.dat')
+stcks5 = np.genfromtxt('1b2u.txt')
+x5 = data5[:,0] 
+y5 = data5[:,1]
+stcksx5 = stcks5[:,0] 
+stcksy5 = stcks5[:,1]
 
 #Experiment
 data10 = np.genfromtxt('Bzexp.csv')
@@ -63,12 +70,16 @@ plt.yticks([])
 ax1.plot([ip1+x1shift,ip1+x1shift],[0,yip],'crimson',linewidth=1.0, dashes=[5, 2])
 ax1.plot(x1+x1shift, y1,'crimson', label='S$_0$', linewidth=2)
 #ax1.plot(x2+x1shift, y2*1, 'darkblue', label='S1($n\pi^*$)  x 10', linewidth=2)
+ax1.plot(x4+x1shift, y4, 'y', label='1\B$_{2u}$', linewidth=2)
 ax1.plot(x2+x1shift, y2*1, 'darkblue', label='1\B$_{1u}$', linewidth=2)
 #ax1.plot(x3+x1shift, y3*1, 'g', label='S2 ($\pi\pi^*$)  x 10', linewidth=2)
 ax1.plot(x3+x1shift, y3*2, 'g', label='2\B$_{2u}$ + 2\B$_{3u}$', linewidth=2)
 #ax1.plot(x4+x1shift, y4*1, 'g', label='S2 ($\pi\pi^*$)  x 10', linewidth=2)
 #ax1.plot(x4+x1shift, y4*1, 'y', label='2\B3u', linewidth=2)
 ax1.plot(xdummy, ydummy, 'white',      label='$\Delta x$ = %.2f eV' %x1shift, linewidth=2)
+n=len(stcksx4)
+for i in range(n):
+    ax1.plot([stcksx4[i]+x1shift,stcksx4[i]+x1shift],[0,stcksy4[i]*1],'y',linewidth=1.0)
 n=len(stcksx1)
 for i in range(n):
     ax1.plot([stcksx1[i]+x1shift,stcksx1[i]+x1shift],[0,stcksy1[i]*1],'crimson',linewidth=1.0)

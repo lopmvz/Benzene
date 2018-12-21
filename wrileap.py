@@ -13,7 +13,8 @@ if __name__ == '__main__':
     f2 = {}
     sym2 = {}
         
-    with open("benzene_xas_cat_6311_2pp_gss_uc.inp.out",'r') as fd:
+    #with open("benzene_xas_cat_6311_2pp_gss_uc.inp.out",'r') as fd:
+    with open("CH2CHF_ee_Pbs.out",'r') as fd:
         n = {}
         s = 0
         lineit = iter(fd)

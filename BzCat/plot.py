@@ -19,20 +19,20 @@ y1 = data1[:,1]
 stcksx1 = stcks1[:,0] 
 stcksy1 = stcks1[:,1]
 
-data11 = np.genfromtxt('Bzp_unrel_uc2ppss.txt')
+data11 = np.genfromtxt('bzcat_unrel.txt')
 #ip11 = 2911.85
 stcksx11 = data11[:,0] 
 stcksy11 = (data11[:,1])
-data11 = np.genfromtxt('Bzp_unrel_uc2ppss.dat')
+data11 = np.genfromtxt('bzcat_unrel.dat')
 x11 = data11[:,0] 
 y11 = (data11[:,1])
 
 #
-data22 = np.genfromtxt('Bzp_rel_uc2ppss.txt')
+data22 = np.genfromtxt('bzcat_rel.txt')
 #ip22 = 291.90
 stcksx22 = data22[:,0] 
 stcksy22 = (data22[:,1])
-data22 = np.genfromtxt('Bzp_rel_uc2ppss.dat')
+data22 = np.genfromtxt('bzcat_rel.dat')
 x22 = data22[:,0] 
 y22 = (data22[:,1])
 
