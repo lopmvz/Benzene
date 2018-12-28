@@ -22,7 +22,7 @@ def read_file( fd ):
         exci_SD1 = data[:,0] 
         fCCSD1 = (data[:,1])
         exci_auSD1=exci_SD1*(1.0/27.2114)
-        FWHM = 0.824
+        FWHM = 0.8
         gamma = FWHM/(2*log(2))
         sigma = gamma/2
         n=len(exci_auSD1)
@@ -42,7 +42,7 @@ def read_file( fd ):
                 speCCSD1[n]=speCCSD1[n]+Mgaussian(omega[n],exci_SD1[i],sigma,fCCSD1[i])
 
         for i in range(0, len(omega), 1):
-            print (omega[i], speCCSD1[i])
+            print omega[i], speCCSD1[i]
 
 
 if __name__ == '__main__':
