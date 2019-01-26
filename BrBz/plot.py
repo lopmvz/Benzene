@@ -82,10 +82,8 @@ for i in range(n):
 #for i in range(n):
 #    ax1.plot([stcksx4[i]+x1shift,stcksx4[i]+x1shift],[0,stcksy4[i]*1],'y',linewidth=1.0)
 ax1.legend(loc='upper left',fontsize='small')
-
-ax2.plot([ip10,ip10],[0,yip],'k',linewidth=1.0, dashes=[5, 2])
-ax2.plot(x10, y10*0.4-0.05, 'k', label='Experiment', linewidth=2)
-ax2.legend(loc='upper left',fontsize='small')
+ax1.text(stcksx1[0]+x1shift-0.1, stcksy1[0]+0.5*stcksy1[0], 'A', fontsize=12)
+ax1.text(stcksx1[1]+x1shift-0.1, stcksy1[1]+0.5*stcksy1[1], 'B ', fontsize=12)
 
 f.subplots_adjust(hspace=0)
 plt.setp([a.get_xticklabels() for a in f.axes[:-1]], visible=False)

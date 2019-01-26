@@ -82,6 +82,10 @@ for i in range(n):
 #for i in range(n):
 #    ax1.plot([stcksx4[i]+x1shift,stcksx4[i]+x1shift],[0,stcksy4[i]*1],'y',linewidth=1.0)
 ax1.legend(loc='upper left',fontsize='small')
+ax1.text(stcksx1[0]+x1shift-0.1, stcksy1[0]+0.3, 'A', fontsize=12)
+ax1.text(stcksx1[3]+x1shift-0.1, stcksy1[3]+0.05, 'B ', fontsize=12)
+ax1.text(stcksx1[6]+x1shift-0., stcksy1[6]+0.06, 'C', fontsize=12)
+ax1.text(stcksx1[11]+x1shift-0.1, stcksy1[11]+0.05, 'D', fontsize=12)
 
 ax2.plot([ip10,ip10],[0,yip],'k',linewidth=1.0, dashes=[5, 2])
 ax2.plot(x10, y10-0.2, 'k', label='Experiment', linewidth=2)

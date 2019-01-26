@@ -72,7 +72,7 @@ def read_file( fd ):
                                             f_os[s][i][p0][j0] = 0
                         s += 1
 
-                if 'State A: eomee_ccsd/rhfref/singlets: 1/B1u' in line:
+                if 'State A: eomee_ccsd/rhfref/singlets: 1/A1' in line:
                         StateA = line.split()[2]
                         if (StateA == "eomee_ccsd/rhfref/singlets:"):
                             templine2 = line.split()[3]

@@ -30,7 +30,7 @@ def read_file( fd ):
            fCCSD1[i] = fCCSD1[i]
 
         step = 0.01
-        omega = np.arange(280,300,step) #Bz
+        omega = np.arange(180,300,step) #Bz
         #omega = np.arange(200,210,step) #Cl-Bz
         #omega = np.arange(180,200,step) #Br-Bz
         speCCSD1 = []
